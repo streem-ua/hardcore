@@ -1108,21 +1108,26 @@
     }
     else if (fallId==2){
         
+        if(copyNode.physicsBody.type != CCPhysicsBodyTypeDynamic){
         
-        id fade1 = [CCActionFadeOut actionWithDuration:2.8];
-        id done1 = [CCActionCallBlock actionWithBlock:^{
+            id fade1 = [CCActionFadeOut actionWithDuration:2.8];
+            id done1 = [CCActionCallBlock actionWithBlock:^{
+                
+                copyNode.opacity = 1;
+                
+                copyNode.position = initialPos;
+                copyNode.rotation = 0;
+                copyNode.physicsBody.type = CCPhysicsBodyTypeKinematic;
+                
+            }];
+            copyNode.physicsBody.type = CCPhysicsBodyTypeDynamic;
             
-            copyNode.opacity = 1;
-            
-            copyNode.position = initialPos;
-            copyNode.rotation = 0;
-            copyNode.physicsBody.type = CCPhysicsBodyTypeKinematic;
-            
-        }];
-        copyNode.physicsBody.type = CCPhysicsBodyTypeDynamic;
-        
-        id seq1 = [CCActionSequence actions:fade1, done1, nil];
-        [copyNode runAction:seq1];
+            id seq1 = [CCActionSequence actions:fade1, done1, nil];
+            [copyNode runAction:seq1];
+         
+         
+         
+         }
         
 //        if(!fallNode.physicsBody.sensor){
 //            

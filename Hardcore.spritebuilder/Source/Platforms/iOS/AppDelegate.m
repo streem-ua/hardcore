@@ -71,7 +71,7 @@
     //[cocos2dSetup setObject:kEAGLColorFormatRGB565 forKey:CCConfigPixelFormat];
     
     [self setupCocos2dWithOptions:cocos2dSetup];
-   // [[CCDirector sharedDirector] setDisplayStats:YES];
+    [[CCDirector sharedDirector] setDisplayStats:YES];
 
     
     
