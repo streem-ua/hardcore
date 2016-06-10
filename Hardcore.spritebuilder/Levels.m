@@ -1110,7 +1110,7 @@
         
         if(copyNode.physicsBody.type != CCPhysicsBodyTypeDynamic){
         
-            id fade1 = [CCActionFadeOut actionWithDuration:2.8];
+            id fade1 = [CCActionFadeOut actionWithDuration:2.9];
             id done1 = [CCActionCallBlock actionWithBlock:^{
                 
                 copyNode.opacity = 1;
