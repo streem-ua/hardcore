@@ -1537,10 +1537,9 @@
                            wildcard:(CCNode*)nodeB
 {
     
-    /*
-     NSLog(@"pair.contacts.normal.x = %f", pair.contacts.normal.x);
-     NSLog(@"pair.contacts.normal.y = %f", pair.contacts.normal.y);
-     */
+    
+    
+    
     normalX = pair.contacts.normal.x;
     normalY = pair.contacts.normal.y;
     
@@ -1575,21 +1574,30 @@
                     NSLog(@"BottomRight");
     } else {
         
-        
-        if (self.rusty.physicsBody.velocity.y <= 0 && self.rusty.physicsBody.velocity.y >= -0.3) {
+ 
+        if (self.rusty.physicsBody.velocity.y <= 0 && self.rusty.physicsBody.velocity.y >= -0.30) {
             
-            _onDoubleJump = 0;
-      
+            
+            if((pair.contacts.normal.x >= -0.9 && pair.contacts.normal.x <= 0.75) && pair.contacts.normal.y <= 0.5){
+                _onDoubleJump = 0;
+            }
+            
+            
         } else {
+   
+            
+            if((pair.contacts.normal.x >= -0.9 && pair.contacts.normal.x <= 0.75) && pair.contacts.normal.y <= 0.5){
+                _onDoubleJump = 0;
+            }
+            
+            
             
         }
         
     }
     
-//    NSLog(@"pair.contacts.normal.x = %f pair.contacts.normal.y = %f", pair.contacts.normal.x, pair.contacts.normal.y);
-    
-    
-    //pair.contacts.normal.x==0 && pair.contacts.normal.y<0
+//    NSLog(@"pair.contacts.normal.x = %f", pair.contacts.normal.x);
+//    NSLog(@"pair.contacts.normal.y = %f", pair.contacts.normal.y);
     
     if(pair.contacts.normal.x==0 && pair.contacts.normal.y<0){
 //        [self.rusty tryAnimation:1];
