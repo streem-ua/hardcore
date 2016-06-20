@@ -98,10 +98,12 @@
     NSTimer *globalDeathTimer;
     BOOL globalDeathTriger;
     
-    
-    
-    
     CCMotionStreak* streak;
+    
+    
+    
+    CCNode *currentPlatform;
+    
     
     }
 
@@ -153,6 +155,7 @@
 - (void)didLoadFromCCB
 {
     
+    currentPlatform = [CCNode node];
     
     
     touchMovingForward = NO;
@@ -1184,7 +1187,22 @@
 }
 
 - (void)leftTouch
+
 {
+    
+    
+    
+    
+    
+    //rustyOnPlatform
+    //если на платформе - добавлять к скорости расти скорость платформы
+    
+    
+    
+    
+    
+    
+    
     
     if(!fifteenEnabled && !self.rustyIsDead && !_physicsNode.paused && levels.allowRustyMoveTutorial){
         _forwardMarch = FALSE;
@@ -1394,65 +1412,38 @@
         
         [levels movePlayerLight:self.rusty.position];
         
+//        NSLog(@"currentPlatform.velocity.x = %f", currentPlatform.physicsBody.velocity.x);
+        
+        
         if (_forwardMarch) {
-            // self.rusty.physicsBody.velocity =
-            // ccp(0,self.rusty.physicsBody.velocity.y);
-            
-            
+
             [self.rusty.physicsBody applyImpulse:ccp(0.1*delta, 0)];
             self.rusty.position = ccp(self.rusty.position.x + rustySpeed*delta, self.rusty.position.y);
             
-            if (self.rusty.physicsBody.velocity.x < 100) {
-                
-                
-                
-                //[self.rusty.physicsBody applyImpulse:ccp(15, 0)];
-                
-                
-                
-                
-                
-                
-                //[self.rusty.physicsBody setVelocity:ccp(100, self.rusty.physicsBody.velocity.y)];
-                
-                //[self.rusty.physicsBody applyForce:ccp(350, 0)];
-                
-                //self.rusty.position = ccpAdd(self.rusty.position, ccpMult(ccp(120, 0), delta));
-                
-            }
-            //[self.rusty.physicsBody applyForce:ccp(395, 0)];
+//            if(rustyOnPlatform){
+//                [self.rusty.physicsBody setVelocity:ccp(100, self.rusty.physicsBody.velocity.y)];
+//            } else {
+//                [self.rusty.physicsBody applyImpulse:ccp(0.1*delta, 0)];
+//                self.rusty.position = ccp(self.rusty.position.x + rustySpeed*delta, self.rusty.position.y);
+//                
+//            }
+            
         }
         
         if (_backwardMarch) {
-            // self.rusty.physicsBody.velocity = ccp(0,
-            // self.rusty.physicsBody.velocity.y);
             
             [self.rusty.physicsBody applyImpulse:ccp(-0.1*delta, 0)];
             self.rusty.position = ccp(self.rusty.position.x - rustySpeed*delta, self.rusty.position.y);
-            // self.rusty.physicsBody.velocity = ccp(self.rusty.physicsBody.velocity.x - 80*delta, self.rusty.physicsBody.velocity.y);
             
-            
-            if (self.rusty.physicsBody.velocity.x > -100) {
-                
-                
-                
-                //[self.rusty.physicsBody applyImpulse:ccp(-15, 0)];
-                
-                
-                //            CGPoint moveDirection = ccp(-1, 0);
-                //            CGPoint force = ccpMult(moveDirection, 500);
-                //            [self.rusty.physicsBody applyForce:force];
-                
-                
-                
-                
-                
-                //[self.rusty.physicsBody setVelocity:ccp(-100, self.rusty.physicsBody.velocity.y)];
-                
-                //[self.rusty.physicsBody applyForce:ccp(-350, 0)];
-                
-                //self.rusty.position = ccpAdd(self.rusty.position, ccpMult(ccp(-120, 0), delta));
-            }
+//             
+//            if(rustyOnPlatform){
+//                [self.rusty.physicsBody setVelocity:ccp(-100, self.rusty.physicsBody.velocity.y)];
+//            } else {
+//                [self.rusty.physicsBody applyImpulse:ccp(-0.1*delta, 0)];
+//                self.rusty.position = ccp(self.rusty.position.x - rustySpeed*delta, self.rusty.position.y);
+//                
+//            }
+          
         }
         
         
@@ -1623,7 +1614,6 @@
     if([nodeB.physicsBody.collisionType  isEqual: @"platform"]){
         
         
-        
         if(fabs(pair.contacts.normal.x)==0 && pair.contacts.normal.y>0)
         {
             NSLog(@"Platform TOP");
@@ -1636,8 +1626,47 @@
             rustyOnPlatform = YES;
             
             
+            nodeB.physicsBody.friction = 0;
+            currentPlatform = nodeB;
+  
             
-            self.rusty.physicsBody.velocity = ccp(nodeB.physicsBody.velocity.x, self.rusty.physicsBody.velocity.y);
+//            
+            
+            
+            
+            if(!_forwardMarch && !_backwardMarch){
+                self.rusty.physicsBody.velocity = ccp(nodeB.physicsBody.velocity.x, self.rusty.physicsBody.velocity.y);
+//                self.rusty.physicsBody.velocity = ccp(nodeB.physicsBody.velocity.x, self.rusty.physicsBody.velocity.y);
+                
+                //NSLog(@"Working");
+            } else {
+
+                
+//                if(_forwardMarch){
+//                    
+//                    self.rusty.physicsBody.velocity = ccp(nodeB.physicsBody.velocity.x+50, self.rusty.physicsBody.velocity.y);
+//                    
+//                } else if(_backwardMarch){
+//                
+//                    self.rusty.physicsBody.velocity = ccp(nodeB.physicsBody.velocity.x-50, self.rusty.physicsBody.velocity.y);
+//                }
+
+                
+                
+                
+                if(_forwardMarch && nodeB.physicsBody.velocity.x <= 0){
+                    
+                    self.rusty.physicsBody.velocity = ccp(nodeB.physicsBody.velocity.x+50, self.rusty.physicsBody.velocity.y);
+                    
+                } else if(_backwardMarch && nodeB.physicsBody.velocity.x > 0){
+                    
+                    self.rusty.physicsBody.velocity = ccp(nodeB.physicsBody.velocity.x-50, self.rusty.physicsBody.velocity.y);
+                }
+                
+                
+            }
+            
+            
             
         }
         
