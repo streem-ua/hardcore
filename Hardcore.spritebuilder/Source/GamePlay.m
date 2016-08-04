@@ -173,8 +173,8 @@
     _levelsSelect = [[CCNode alloc] init];
     [_contentNode addChild:_levelsSelect];
     
-    rustySpeed = 87;
-    rustyJump = 36;
+    rustySpeed = 111;
+    rustyJump = 66;
     
     
     //gameImageButtons = [CCBReader load:@"game_buttons"];

@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>798</integer>
+	<integer>803</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -9389,8 +9389,6 @@
 				<string></string>
 				<key>displayName</key>
 				<string>3</string>
-				<key>hidden</key>
-				<true/>
 				<key>memberVarAssignmentName</key>
 				<string>_rustyMask</string>
 				<key>memberVarAssignmentType</key>
@@ -9456,7 +9454,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>rusty/old.png</string>
+							<string>rusty/3.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -9500,6 +9498,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -9725,8 +9725,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
