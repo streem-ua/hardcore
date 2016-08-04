@@ -147,14 +147,13 @@
     
     [_fifteenStartSelect runAction:[CCActionSequence actions:moveFifteenEase, callMe, nil]];
     
+
 }
 
 
 -(void) levelsPressed {
     
-    
     [self.gameplayParrentDelegate startupMenuFunc:YES with15id:0];
-    
 
 }
 
@@ -188,8 +187,11 @@
         _levelsBtnTxt.visible = YES;
       
         
+        
+        
     } else {
-  
+        
+        
         _fifteenStartSelect.visible = NO;
         [self.gameplayParrentDelegate startupMenuFunc:NO with15id:sender.name.intValue];
    

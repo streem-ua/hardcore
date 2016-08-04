@@ -9,6 +9,8 @@
 #import "Levels.h"
 #import "FallPlatform.h"
 #import "TypewriteTxt.h"
+#import "FifteenItem.h"
+#import "MyBoss.h"
 
 
 @implementation Levels {
@@ -90,7 +92,7 @@
     NSTimer *rustyMovingTimer;
     
     CCNode *tmpNode;
-    
+    MyBoss *_boss;
     
     
     
@@ -129,6 +131,7 @@
     TypewriteTxt *_txt42;
     
     BOOL levelFinishedLoading;
+    BOOL bossDefeated;
     
     
     }
@@ -208,6 +211,7 @@
     
     //[self.gameplayParrentDelegate testFunc];
     
+    bossDefeated = NO;
     
     self.leftFirstPressed = NO;
     self.rightFirstPressed = NO;
@@ -649,8 +653,12 @@
     
     int tmpDirection = 0;
     
-    CGRect rustyRect = CGRectMake(rustyX-100, rustyY-100, 150, 150);
+    CGRect bossRect = CGRectMake(rustyX-_boss.pixelsX/2, rustyY-_boss.pixelsY/2, _boss.pixelsX, _boss.pixelsY);
     CGRect rustyRectCatch = CGRectMake(rustyX-50, rustyY-50, 100, 100);
+    
+    
+    
+    
     
     
     
@@ -759,6 +767,55 @@
             
             
         }];
+        
+        
+    }
+    
+    
+    
+    
+//    NSLog(@"self.gameplayParrentDelegate.currentActiveLevel = %i", self.gameplayParrentDelegate.currentActiveLevel);
+    
+    
+    if(CGRectContainsPoint(bossRect, _boss.position) && self.gameplayParrentDelegate.currentActiveLevel == 6 && !bossDefeated){
+        
+        
+        bossDefeated = YES;
+        
+        _boss.visible = NO;
+        //NSLog(@"BOSSSSSS = %i", self.gameplayParrentDelegate.activePuzzleNumber);
+        
+        
+//        NSLog(@"pixelsX = %i", _boss.pixelsX);
+//        NSLog(@"pixelsY = %i", _boss.pixelsY);
+        
+        
+        
+        NSData *readItemData = [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%d", self.gameplayParrentDelegate.activePuzzleNumber]];
+        FifteenItem *readItem = [NSKeyedUnarchiver unarchiveObjectWithData:readItemData];
+        
+        FifteenItem *item = [[FifteenItem alloc] init];
+        
+        item.isFifteenOpened = @YES;
+        item.fifteenDeath = readItem.fifteenDeath;
+        item.fifteenMoves = readItem.fifteenMoves;
+        item.fifteenMinutesPassed = readItem.fifteenMinutesPassed;
+        item.fifteenSecondsPassed = readItem.fifteenSecondsPassed;
+        item.fifteenEtaDeath = readItem.fifteenEtaDeath;
+        item.fifteenEtaMoves = readItem.fifteenEtaMoves;
+        item.fifteenEtaMinutesPassed = readItem.fifteenEtaMinutesPassed;
+        item.fifteenEtaSecondsPassed = readItem.fifteenEtaSecondsPassed;
+        item.fifteenPositions = readItem.fifteenPositions;
+        item.fifteenPositionsShuffled = readItem.fifteenPositionsShuffled;
+        item.currentFifteenLevel = readItem.currentFifteenLevel;
+        
+        item.isBossDefeated = @YES;
+        
+        NSData *itemData = [NSKeyedArchiver archivedDataWithRootObject:item];
+        [[NSUserDefaults standardUserDefaults] setObject:itemData forKey:[NSString stringWithFormat:@"%d", self.gameplayParrentDelegate.activePuzzleNumber]];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        
         
         
     }

@@ -20,6 +20,7 @@
         
     
         self.isFifteenOpened = @NO;
+        self.isBossDefeated = @NO;
         
         self.fifteenSecondsPassed = @0;
         self.fifteenMinutesPassed = @0;
@@ -71,12 +72,13 @@
     }
     return self;
 }
-// так не должно быть ) чет я завтыкал ) сейчас найду
+
 
 -(void)encodeWithCoder:(NSCoder *)aCoder {
     
     
     [aCoder encodeObject:self.isFifteenOpened forKey:@"isFifteenOpened"];
+    [aCoder encodeObject:self.isBossDefeated forKey:@"isBossDefeated"];
     
     [aCoder encodeObject:self.fifteenSecondsPassed forKey:@"fifteenSecondsPassed"];
     [aCoder encodeObject:self.fifteenMinutesPassed forKey:@"fifteenMinutesPassed"];
@@ -104,6 +106,7 @@
         
         
         self.isFifteenOpened = [aDecoder decodeObjectForKey:@"isFifteenOpened"];
+        self.isBossDefeated = [aDecoder decodeObjectForKey:@"isBossDefeated"];
         
         self.fifteenSecondsPassed = [aDecoder decodeObjectForKey:@"fifteenSecondsPassed"];
         self.fifteenMinutesPassed = [aDecoder decodeObjectForKey:@"fifteenMinutesPassed"];

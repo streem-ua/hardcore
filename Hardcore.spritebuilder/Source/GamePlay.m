@@ -7,6 +7,7 @@
 #import "LeftMenu.h"
 #import "RightMenu.h"
 #import "FifteenItem.h"
+#import "BossStory.h"
 
 
 @implementation GamePlay {
@@ -104,6 +105,8 @@
     
     CCNode *currentPlatform;
     
+    
+    BossStory *bossStory;
     
     }
 
@@ -250,8 +253,12 @@
             }
     } else {
         
+        
+        
         self.currentActiveLevel = 1;
         self.activePuzzleNumber = _currentFifteenNumber;
+        [self fifteenChoosed];
+        
         
     }
     
@@ -397,6 +404,9 @@
     _contentNode.userInteractionEnabled = YES;
     
     
+    
+    NSLog(@"self.currentActiveLevel = %i", self.currentActiveLevel);
+    
     [self startGameWithLevel:self.currentActiveLevel withString:@"native"];
     
     
@@ -494,6 +504,10 @@
         
         [fifteen setActiveNumber:[readItem.currentFifteenLevel intValue]];
         self.currentActiveLevel = [readItem.currentFifteenLevel intValue];
+        
+        
+        
+        
         levelId = [readItem.currentFifteenLevel intValue];
         
         
@@ -507,8 +521,14 @@
         
         }
         
-
         
+        
+        
+        
+    } if([typeStr  isEqual: @"bossLevel"]){
+    
+        self.currentActiveLevel = 6;
+    
     } else {
         
         
@@ -523,6 +543,8 @@
     self.thisIsTutorial = NO;
     
     if(!self._ifLevelsPressed){
+        
+        
         switch (levelId) {
             case 1:
                 
@@ -533,7 +555,6 @@
                     
                     
                     levelName = @"newLevels/level3/level3";
-               
                     
                 } else if(self.activePuzzleNumber == 4){
                     
@@ -580,7 +601,7 @@
                     levelName = @"newLevels/level15/level15";
                     
                     
-                }
+                } 
                 
                 
                 
@@ -806,6 +827,67 @@
                 
                 
                 break;
+                
+                
+            case 6:
+                
+                
+                if(self.activePuzzleNumber == 1){
+                    
+                    levelName = @"newLevels/level46/level46";
+                    
+                    
+                } else if(self.activePuzzleNumber == 4){
+                    
+                    levelName = @"newLevels/level16/level16";
+                    
+                } else if(self.activePuzzleNumber == 3){
+                    
+                    levelName = @"newLevels/level40/level40";
+                    
+                } else if(self.activePuzzleNumber == 2){
+                    
+                    levelName = @"newLevels/level2/level2";
+                    
+                } else if(self.activePuzzleNumber == 5){
+                    
+                    levelName = @"newLevels/level47/level47";
+                    
+                } else if(self.activePuzzleNumber == 6){
+                    
+                    levelName = @"newLevels/level1/level1";
+                    
+                } else if(self.activePuzzleNumber == 7){
+                    
+                    levelName = @"newLevels/level35/level35";
+                    
+                } else if(self.activePuzzleNumber == 8){
+                    
+                    levelName = @"newLevels/level29/level29";
+                    
+                } else if(self.activePuzzleNumber == 9){
+                    
+                    levelName = @"newLevels/level51/level51";
+                    
+                } else if (self.activePuzzleNumber == 10){
+                    
+                    levelName = @"newLevels/level39/level39";
+                    
+                } else if (self.activePuzzleNumber == 11){
+                    
+                    self.thisIsTutorial = YES;
+                    self.firstTutorialWin = YES;
+                    
+                    
+                    levelName = @"newLevels/level6/level6";
+                    
+                }
+                
+                
+                break;
+                
+                
+                
         }
         
     } else {
@@ -828,6 +910,8 @@
     
     
     if([typeStr  isEqual: @"fifteen"]){
+        
+        
         
         fifteenEnabled = TRUE;
         self.newLevelLoading = YES;
@@ -963,7 +1047,6 @@
     
     [_levelNode removeChildByName:@"levels" cleanup:YES];
     
-//    NSLog(@"levelName = %@", levelName);
     
     self.fifteenNewLevel = YES;
     levels = (Levels*)[CCBReader load:levelName];
@@ -1022,6 +1105,8 @@
     [levels runAction:[CCActionSequence actions:[CCActionDelay actionWithDuration:1], moveToLevelsWithEase, nil]];
     
 //    self.rusty.physicsBody.sensor = YES;
+    
+    
     
     
 }
@@ -1611,6 +1696,20 @@
     }
     
     
+    
+    
+    
+    if([nodeB.physicsBody.collisionType  isEqual: @"_boss"]){
+        
+        NSLog(@"THIS is BOSS");
+        
+    }
+    
+    
+    
+    
+    
+    
     if([nodeB.physicsBody.collisionType  isEqual: @"platform"]){
         
         
@@ -2136,5 +2235,25 @@
     globalDeathTriger = YES;
 }
 
+
+
+-(void) showBossStory:(int) bossLevelId {
+    
+    [self pauseGamePlayScene];
+    
+    bossStory = (BossStory*)[CCBReader load:@"bossScreens/BossStory"];
+    bossStory.newLevelId = bossLevelId;
+    bossStory.gameplayParrentDelegate = self;
+    [self addChild:bossStory];
+    
+    
+}
+
+
+-(void) removeBossStory{
+    
+    [self removeChild:bossStory];
+    [self resumeGamePlayScene];
+}
 
 @end

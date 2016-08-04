@@ -48,6 +48,8 @@
                 
                 
                 item.isFifteenOpened = @YES;
+                item.isBossDefeated = @NO;
+                
                 //            item.fifteenNumber = readItem.fifteenNumber;
                 item.fifteenDeath = readItem.fifteenDeath;
                 item.fifteenMoves = readItem.fifteenMoves;
@@ -87,6 +89,7 @@
                 item.fifteenMoves = [NSNumber numberWithInt:-1];
                 item.fifteenMinutesPassed = [NSNumber numberWithInt:-1];
                 item.fifteenSecondsPassed = [NSNumber numberWithInt:-1];
+                item.isBossDefeated = @NO;
                 
                 item.currentFifteenLevel = @1;
                 
@@ -657,6 +660,8 @@
         FifteenItem *item = [[FifteenItem alloc] init];
     
         item.isFifteenOpened = @YES;
+        item.isBossDefeated = @NO;
+    
         item.fifteenDeath = @1;
         item.fifteenMoves = @12;
         item.fifteenMinutesPassed = @3;

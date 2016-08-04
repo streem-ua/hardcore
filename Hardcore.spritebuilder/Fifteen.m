@@ -897,6 +897,8 @@
 
 -(void) initGamePlayLevel {
     
+//    NSLog(@"newLevelId = %i", newLevelId);
+    
     [self.gameplayParrentDelegate startGameWithLevel:newLevelId withString:@"fifteen"];
 }
 
@@ -939,6 +941,7 @@
     item.fifteenPositionsShuffled = readItem.fifteenPositionsShuffled;
     item.currentFifteenLevel = readItem.currentFifteenLevel;
     
+    item.isBossDefeated = readItem.isBossDefeated;
     
     NSData *itemData = [NSKeyedArchiver archivedDataWithRootObject:item];
     [[NSUserDefaults standardUserDefaults] setObject:itemData forKey:[NSString stringWithFormat:@"%d", activePuzzleNumber]];
@@ -956,14 +959,102 @@
     
     if(ifWin){
         
-        //if(self.gameplayParrentDelegate.thisIsTutorial){
         
         
-        [self.gameplayParrentDelegate pauseGamePlayScene];
-        [resultsBar startAnimation: activePuzzleNumber];
         
-        [resultsBar updateTime:self.gameplayParrentDelegate.levelMinutes andSeconds:self.gameplayParrentDelegate.levelSeconds];
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        BOOL showBossLevel = YES;
+        
+        
+        if(showBossLevel){
+        
+        
+            
+            newLevelId = 6;
+            self.currentDirectionString = @"down";
+//            [self.gameplayParrentDelegate startGameWithLevel:newLevelId withString:@"bossLevel"];
+            [self.gameplayParrentDelegate hideFifteen];
+           
+  
+            
+            [self.gameplayParrentDelegate showBossStory:newLevelId];
+            
+            
+            
+            
+        } else {
+            
+            [self.gameplayParrentDelegate pauseGamePlayScene];
+            
+            
+            [resultsBar startAnimation: activePuzzleNumber];
+            [resultsBar updateTime:self.gameplayParrentDelegate.levelMinutes andSeconds:self.gameplayParrentDelegate.levelSeconds];
+            
+            
+            for (CCNode *tmpNode in self.fifteenShuffleHolder.children) {
+                
+                if(tmpNode.name.intValue > 0 && tmpNode.name.intValue <= 5){
+                    CCNode *bgNode = [tmpNode getChildByName:@"myCellBg" recursively:YES];
+                    
+                    float myTime = 0.0;
+                    float scaleTime = 0.0;
+                    
+                    //                    myTime = tmpNode.name.intValue/7.;
+                    //                    scaleTime = tmpNode.name.intValue/7. + 1.0;
+                    //
+                    
+                    if(tmpNode.name.intValue == 1){
+                        myTime = 0.1;
+                        scaleTime = 1.1;
+                    } else if(tmpNode.name.intValue == 2){
+                        myTime = 0.2;
+                        scaleTime = 1.2;
+                    } else if(tmpNode.name.intValue == 3){
+                        myTime = 0.3;
+                        scaleTime = 1.3;
+                    } else if(tmpNode.name.intValue == 4){
+                        myTime = 0.4;
+                        scaleTime = 1.4;
+                    } else if(tmpNode.name.intValue == 5){
+                        myTime = 0.5;
+                        scaleTime = 1.5;
+                    }
+                    
+                    CCActionFadeIn *fadeInAction = [CCActionFadeIn actionWithDuration:.2];
+                    CCActionDelay *delayTime = [CCActionDelay actionWithDuration:myTime];
+                    
+                    id sequence = [CCActionSequence actions: delayTime, fadeInAction, nil];
+                    [bgNode runAction:sequence];
+                    
+                    CCActionScaleTo *ccScale = [CCActionScaleTo actionWithDuration:.2 scale:.3];
+                    CCActionFadeOut *fadeOut = [CCActionFadeOut actionWithDuration:.2];
+                    CCActionDelay *scaleDelay = [CCActionDelay actionWithDuration:scaleTime];
+                    CCActionEaseBackInOut *ease = [CCActionEaseBackInOut actionWithAction:ccScale];
+                    
+                    [tmpNode runAction:[CCActionSequence actions: scaleDelay, ease, fadeOut, nil]];
+                    [bgNode runAction:[CCActionSequence actions: scaleDelay, fadeOut, nil]];
+                    
+                    
+                    
+                    
+                    
+                    
+                }
+                
+            }
+            
+        }
         
         
         
@@ -982,6 +1073,8 @@
         item.fifteenEtaSecondsPassed = readItem.fifteenEtaSecondsPassed;
         
         item.fifteenPositions = readItem.fifteenPositions;
+        
+        item.isBossDefeated = readItem.isBossDefeated;
         
 //        item.fifteenPositionsShuffled = readItem.fifteenPositionsShuffled;
         
@@ -1142,6 +1235,8 @@
         
         
         
+        
+        
 //        NSLog(@"readItemTest.fifteenMoves = %@", readItemTest.fifteenMoves);
         
         NSData *readItemDataNext = [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%d", activePuzzleNumber+1]];
@@ -1199,108 +1294,16 @@
         
         
         
-        for (CCNode *tmpNode in self.fifteenShuffleHolder.children) {
-            
-            
-            if(tmpNode.name.intValue > 0 && tmpNode.name.intValue <= 5){
-                
-                //                    tmpNode.opacity = .2;
-                CCNode *bgNode = [tmpNode getChildByName:@"myCellBg" recursively:YES];
-                
-                float myTime = 0.0;
-                float scaleTime = 0.0;
-                
-                //                    myTime = tmpNode.name.intValue/7.;
-                //                    scaleTime = tmpNode.name.intValue/7. + 1.0;
-                //
-                
-                if(tmpNode.name.intValue == 1){
-                    myTime = 0.1;
-                    scaleTime = 1.1;
-                } else if(tmpNode.name.intValue == 2){
-                    myTime = 0.2;
-                    scaleTime = 1.2;
-                } else if(tmpNode.name.intValue == 3){
-                    myTime = 0.3;
-                    scaleTime = 1.3;
-                } else if(tmpNode.name.intValue == 4){
-                    myTime = 0.4;
-                    scaleTime = 1.4;
-                } else if(tmpNode.name.intValue == 5){
-                    myTime = 0.5;
-                    scaleTime = 1.5;
-                }
-                
-                CCActionFadeIn *fadeInAction = [CCActionFadeIn actionWithDuration:.2];
-                CCActionDelay *delayTime = [CCActionDelay actionWithDuration:myTime];
-                
-                id sequence = [CCActionSequence actions: delayTime, fadeInAction, nil];
-                [bgNode runAction:sequence];
-                
-                CCActionScaleTo *ccScale = [CCActionScaleTo actionWithDuration:.2 scale:.3];
-                CCActionFadeOut *fadeOut = [CCActionFadeOut actionWithDuration:.2];
-                CCActionDelay *scaleDelay = [CCActionDelay actionWithDuration:scaleTime];
-                CCActionEaseBackInOut *ease = [CCActionEaseBackInOut actionWithAction:ccScale];
-                
-                [tmpNode runAction:[CCActionSequence actions: scaleDelay, ease, fadeOut, nil]];
-                [bgNode runAction:[CCActionSequence actions: scaleDelay, fadeOut, nil]];
-                
-                
-                
-                
-                
-                
-            }
-            
-        }
         
         
         
         
         
-        //        } else {
-        //            NSLog(@"WIN WIN WIN WIN");
-        //
-        //            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Победа"
-        //                                                            message:@"Ты не тупой и собрал пятнашку"
-        //                                                           delegate:self
-        //                                                  cancelButtonTitle:@"С начала"
-        //                                                  otherButtonTitles:nil];
-        //            [alert show];
-        //
-        //
-        //            [self.fifteenOriginHolder removeFromParentAndCleanup: YES];
-        //            [self.fifteenShuffleHolder removeFromParentAndCleanup: YES];
-        //
-        //
-        //            self.fifteenOriginHolder = [[CCSprite alloc] init];
-        //            //[self addChild:self.fifteenOriginHolder];
-        //
-        //            self.fifteenShuffleHolder = [[CCSprite alloc] init];
-        //            [self addChild:self.fifteenShuffleHolder];
-        //
-        //
-        //            activePuzzleNumber++;
-        //
-        //            [self.gameplayParrentDelegate hideFifteen];
-        //            [self.gameplayParrentDelegate startGameWithLevel:1 withString:@"native"];
-        //
-        //
-        //            [self manageArrays];
-        //            [self buildOriginGrid];
-        //            [self buildGrid];
-        //        }
         
         
         
     } else {
-        
-        //self.fifteenShuffleHolderLittle = [CCSprite spriteWithTexture:[self.fifteenShuffleHolder texture]];
-        
-        
         [self.gameplayParrentDelegate hideFifteen];
-        
-        
     }
     
     

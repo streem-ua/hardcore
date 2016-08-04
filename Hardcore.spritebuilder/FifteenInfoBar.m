@@ -58,12 +58,37 @@
 -(void) startShow:(FifteenItem *)currentFifteenData andLevelId:(int)levelId{
     
     
+    
+//    NSLog(@"isBossDefeated = %i", [currentFifteenData.isBossDefeated intValue]);
+//    NSLog(@"currentFifteenLevel = %i", [currentFifteenData.currentFifteenLevel intValue]);
+    
+    
     if([currentFifteenData.currentFifteenLevel intValue] == 1){
-        _continueButton.visible = NO;
-        _myButton.visible = YES;
+        
+        
+        if([currentFifteenData.isBossDefeated intValue] == 1){
+            _continueButton.visible = NO;
+            _myButton.visible = YES;
+        } else {
+            _continueButton.visible = YES;
+            _myButton.visible = NO;
+        }
+        
+        
     } else {
-        _myButton.visible = NO;
-        _continueButton.visible = YES;
+        
+        
+        
+        
+        if([currentFifteenData.isBossDefeated intValue] == 1){
+            _continueButton.visible = NO;
+            _myButton.visible = YES;
+        } else {
+            _continueButton.visible = YES;
+            _myButton.visible = NO;
+        }
+        
+        
     }
     
     
