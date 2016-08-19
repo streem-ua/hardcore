@@ -164,6 +164,8 @@
 
 	// Position of the node.
 	CGPoint _position;
+    
+    CGPoint _oldPosition;
 
 	// Skew angles.
 	float _skewX, _skewY;
@@ -269,6 +271,8 @@
  @see positionInPoints
  @see positionType */
 @property(nonatomic,readwrite,assign) CGPoint position;
+
+@property(nonatomic,readwrite,assign) CGPoint oldPosition;
 
 /** Position (x,y) of the node in points from the bottom left corner.
  @see position */

@@ -58,7 +58,7 @@
     NSMutableDictionary* _baseValues;
     
     NSInteger _animationManagerId;
-    CCBSequence* _runningSequence;
+//    CCBSequence* _runningSequence;
     CCBSequence* _lastSequence;
     
     void (^block)(id sender);
@@ -67,6 +67,8 @@
     NSMutableArray* _currentActions;
     
 }
+
+@property (nonatomic,assign) CCBSequence* runningSequence;
 
 /** @name Altering Animation Playback */
 

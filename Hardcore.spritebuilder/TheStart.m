@@ -471,19 +471,41 @@
                         
                     case 11:
                         
-                            item.isFifteenOpened = @YES;
                         
+                        if(devMode){
+                            
+                            item.isFifteenOpened = @YES;
+                            [item.fifteenPositions replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:5.3]];
+                            [item.fifteenPositions replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:2.2]];
+                            [item.fifteenPositions replaceObjectAtIndex:6 withObject: [NSNumber numberWithFloat:3.4]];
+                            [item.fifteenPositions replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:4.1]];
+                            [item.fifteenPositions replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:1.6]];
+                            
+                            [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:5.3]];
+                            [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:2.2]];
+                            [item.fifteenPositionsShuffled replaceObjectAtIndex:6 withObject: [NSNumber numberWithFloat:3.4]];
+                            [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:4.1]];
+                            [item.fifteenPositionsShuffled replaceObjectAtIndex:13 withObject: [NSNumber numberWithFloat:1.6]];
+                            
+                        } else {
+                        
+                            item.isFifteenOpened = @NO;
+                            
                             [item.fifteenPositions replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:1.3]];
                             [item.fifteenPositions replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:2.2]];
                             [item.fifteenPositions replaceObjectAtIndex:6 withObject: [NSNumber numberWithFloat:3.4]];
-                            [item.fifteenPositions replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:1.1]];
+                            [item.fifteenPositions replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:4.1]];
                             [item.fifteenPositions replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:5.6]];
-                        
+                            
                             [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:1.3]];
                             [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:2.2]];
                             [item.fifteenPositionsShuffled replaceObjectAtIndex:6 withObject: [NSNumber numberWithFloat:3.4]];
                             [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:4.1]];
                             [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:5.6]];
+                            
+                        }
+                        
+                        
                             
                        break;
                         

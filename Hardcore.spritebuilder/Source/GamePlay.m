@@ -108,6 +108,8 @@
     
     BossStory *bossStory;
     
+    BOOL freezeEnabled;
+    
     }
 
 
@@ -122,7 +124,7 @@
         self.rustyDeadFirstTime = NO;
         self.rustyDeadFirstTimeGlobal = NO;
         self.fifteenNewLevel = NO;
-
+        freezeEnabled = NO;
         // отлично, добавляем обзервер
         
         
@@ -232,7 +234,7 @@
         
         
         
-                CCButton *testBtn = [[CCButton alloc] initWithTitle:[NSString stringWithFormat:@"%i", i]];
+                CCButton *testBtn = [[CCButton alloc] initWithTitle:[NSString stringWithFormat:@"| %i |", i]];
                 testBtn.name = [NSString stringWithFormat:@"%i", i];
                 [testBtn setTarget:self selector:@selector(tileBtnClicked:)];
         
@@ -251,6 +253,8 @@
                 
                 
             }
+        
+        
     } else {
         
         
@@ -269,7 +273,7 @@
 
 - (void) tileBtnClicked:(CCButton *)sender{
     
-        NSLog(@"%@", sender.name);
+    NSLog(@"%@", sender.name);
     
     _levelsSelect.visible = NO;
     
@@ -1810,7 +1814,7 @@
      */
     
     
-    if([nodeB.physicsBody.collisionType  isEqual: @"spike"] && !self.newLevelLoading){
+    if([nodeB.physicsBody.collisionType  isEqual: @"spike"] && !self.newLevelLoading && !freezeEnabled){
         
         self.rustyDeathNum--;
         [fifteen updateSomeData];
@@ -2249,6 +2253,34 @@
     
 }
 
+
+-(void) addNewCheckPoint {
+    [levels setRustyPosition:self.rusty.position];
+}
+
+
+-(void) switchLightOff {
+    
+    if(levels._rustyMask.visible){
+        
+        levels._rustyMask.visible = NO;
+        
+        
+    } else {
+        
+        levels._rustyMask.visible = YES;
+        
+    }
+
+}
+
+
+
+-(void) freezeLevel:(BOOL)freeze {
+    freezeEnabled = freeze;
+    [levels setFreeze:freeze];
+    
+}
 
 -(void) removeBossStory{
     

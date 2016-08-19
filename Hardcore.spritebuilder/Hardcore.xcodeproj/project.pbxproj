@@ -87,6 +87,7 @@
 		27C268961CC50AA7000B64EC /* rustyFollowBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 27C268951CC50AA7000B64EC /* rustyFollowBack.png */; };
 		27C268991CC7BE43000B64EC /* FifteenItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C268981CC7BE42000B64EC /* FifteenItem.m */; };
 		27C268A21CC91635000B64EC /* FifteenInfoBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C268A11CC91635000B64EC /* FifteenInfoBar.m */; };
+		27C29DD21D660704009F0739 /* MovingPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C29DD11D660704009F0739 /* MovingPlatform.m */; };
 		27C46B211CA5655D00C567C8 /* FifteenCustomTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C46B201CA5655D00C567C8 /* FifteenCustomTab.m */; };
 		27C46B321CA5667500C567C8 /* active1.png in Resources */ = {isa = PBXBuildFile; fileRef = 27C46B281CA5667500C567C8 /* active1.png */; };
 		27C46B331CA5667500C567C8 /* active2.png in Resources */ = {isa = PBXBuildFile; fileRef = 27C46B291CA5667500C567C8 /* active2.png */; };
@@ -355,6 +356,8 @@
 		27C268981CC7BE42000B64EC /* FifteenItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FifteenItem.m; sourceTree = "<group>"; };
 		27C268A01CC91635000B64EC /* FifteenInfoBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FifteenInfoBar.h; sourceTree = "<group>"; };
 		27C268A11CC91635000B64EC /* FifteenInfoBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FifteenInfoBar.m; sourceTree = "<group>"; };
+		27C29DD01D660704009F0739 /* MovingPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingPlatform.h; sourceTree = "<group>"; };
+		27C29DD11D660704009F0739 /* MovingPlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingPlatform.m; sourceTree = "<group>"; };
 		27C46B1D1CA5655600C567C8 /* FifteenCustomTab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FifteenCustomTab.h; sourceTree = "<group>"; };
 		27C46B201CA5655D00C567C8 /* FifteenCustomTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FifteenCustomTab.m; sourceTree = "<group>"; };
 		27C46B281CA5667500C567C8 /* active1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = active1.png; sourceTree = "<group>"; };
@@ -833,6 +836,8 @@
 				27667F961C0745BA004A6045 /* MainMenu.h */,
 				27667F971C0745BA004A6045 /* MainMenu.m */,
 				D352B48019EC608A00829775 /* MetalShaders */,
+				27C29DD01D660704009F0739 /* MovingPlatform.h */,
+				27C29DD11D660704009F0739 /* MovingPlatform.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -1364,6 +1369,7 @@
 				27A9DA231C7D136F0039581E /* TheStart.m in Sources */,
 				2733E2411BE9077800F4FDDB /* FallPlatform.m in Sources */,
 				27210CA11CAACD0F00BE360C /* FifteenResultsBar.m in Sources */,
+				27C29DD21D660704009F0739 /* MovingPlatform.m in Sources */,
 				27A9DA261C7D2E830039581E /* TypewriteTxt.m in Sources */,
 				270A3DE31C6515BA0045C036 /* LeftMenu.m in Sources */,
 				27C268A21CC91635000B64EC /* FifteenInfoBar.m in Sources */,
