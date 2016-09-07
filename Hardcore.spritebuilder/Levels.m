@@ -143,6 +143,8 @@
     BOOL freezeEnabled;
     BOOL freezeTimelineReturned;
     
+    CCNode *_bossCustom;
+    
     }
 
 /*
@@ -677,7 +679,7 @@
     
     CGRect bossRect = CGRectMake(rustyX-_boss.pixelsX/2, rustyY-_boss.pixelsY/2, _boss.pixelsX, _boss.pixelsY);
     CGRect rustyRectCatch = CGRectMake(rustyX-50, rustyY-50, 100, 100);
-    
+    CGRect bossCustomRect = CGRectMake(_bossCustom.position.x, _bossCustom.position.y, _bossCustom.boundingBox.size.width, _bossCustom.boundingBox.size.height);
     
     
     
@@ -799,7 +801,7 @@
 //    NSLog(@"self.gameplayParrentDelegate.currentActiveLevel = %i", self.gameplayParrentDelegate.currentActiveLevel);
     
     
-    if(CGRectContainsPoint(bossRect, _boss.position) && self.gameplayParrentDelegate.currentActiveLevel == 6 && !bossDefeated){
+    if((CGRectContainsPoint(bossRect, _boss.position) || CGRectContainsPoint(bossCustomRect, _bossCustom.position)) && self.gameplayParrentDelegate.currentActiveLevel == 6 && !bossDefeated){
         
         
         bossDefeated = YES;
@@ -836,6 +838,17 @@
         NSData *itemData = [NSKeyedArchiver archivedDataWithRootObject:item];
         [[NSUserDefaults standardUserDefaults] setObject:itemData forKey:[NSString stringWithFormat:@"%d", self.gameplayParrentDelegate.activePuzzleNumber]];
         [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        
+        
+        
+    }
+    
+    
+    if(self.gameplayParrentDelegate.rustyIsDead){
+        
+        bossDefeated = NO;
+        _boss.visible = YES;
         
         
         
