@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>434</integer>
+	<integer>439</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -655,7 +655,7 @@
 						<string>FloatVar</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
+							<real>3</real>
 							<real>0.25</real>
 						</array>
 					</dict>
@@ -828,6 +828,8 @@
 						<string>ccbResources/ccbParticleFire.png</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -3484,8 +3486,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>

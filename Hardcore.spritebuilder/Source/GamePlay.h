@@ -89,7 +89,8 @@
 
 -(void) clearLevels;
 
-
+-(void) showBossStory:(int) bossLevelId;
+-(void) removeBossStory;
 
 
 @property NSUserDefaults *myFifteenSaved;

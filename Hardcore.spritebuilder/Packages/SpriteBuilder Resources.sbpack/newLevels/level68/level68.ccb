@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>680</integer>
+	<integer>952</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -41,175 +41,11 @@
 		<array>
 			<dict>
 				<key>UUID</key>
-				<integer>66</integer>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>back1</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>256</real>
-							<real>192</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>spriteFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string></string>
-							<string>newLevels/level68/back1.png</string>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>normalMapSpriteFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string></string>
-							<string></string>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>color</string>
-						<key>type</key>
-						<string>Color3</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>effects</string>
-						<key>type</key>
-						<string>EffectControl</string>
-						<key>value</key>
-						<array/>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
 				<integer>67</integer>
 				<key>animatedProperties</key>
 				<dict>
 					<key>0</key>
-					<dict>
-						<key>opacity</key>
-						<dict>
-							<key>keyframes</key>
-							<array>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>opacity</string>
-									<key>time</key>
-									<real>0.66666668653488159</real>
-									<key>type</key>
-									<integer>10</integer>
-									<key>value</key>
-									<real>1</real>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>opacity</string>
-									<key>time</key>
-									<real>2.3666665554046631</real>
-									<key>type</key>
-									<integer>10</integer>
-									<key>value</key>
-									<real>0.0</real>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>opacity</string>
-									<key>time</key>
-									<real>3.6666667461395264</real>
-									<key>type</key>
-									<integer>10</integer>
-									<key>value</key>
-									<real>1</real>
-								</dict>
-							</array>
-							<key>name</key>
-							<string>opacity</string>
-							<key>type</key>
-							<integer>10</integer>
-						</dict>
-					</dict>
+					<dict/>
 				</dict>
 				<key>baseClass</key>
 				<string>CCSprite</string>
@@ -294,6 +130,179 @@
 						</array>
 					</dict>
 					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>effects</string>
+						<key>type</key>
+						<string>EffectControl</string>
+						<key>value</key>
+						<array/>
+					</dict>
+				</array>
+				<key>selected</key>
+				<true/>
+				<key>seqExpanded</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>66</integer>
+				<key>animatedProperties</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>opacity</key>
+						<dict>
+							<key>keyframes</key>
+							<array>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>opacity</string>
+									<key>time</key>
+									<real>1.3333333730697632</real>
+									<key>type</key>
+									<integer>10</integer>
+									<key>value</key>
+									<real>1</real>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>opacity</string>
+									<key>time</key>
+									<real>2.8333332538604736</real>
+									<key>type</key>
+									<integer>10</integer>
+									<key>value</key>
+									<real>0.33000001311302185</real>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>opacity</string>
+									<key>time</key>
+									<real>4.3000001907348633</real>
+									<key>type</key>
+									<integer>10</integer>
+									<key>value</key>
+									<real>1</real>
+								</dict>
+							</array>
+							<key>name</key>
+							<string>opacity</string>
+							<key>type</key>
+							<integer>10</integer>
+						</dict>
+					</dict>
+				</dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>back1</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>256</real>
+							<real>192</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>spriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>newLevels/level68/back1.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>normalMapSpriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string></string>
+						</array>
+					</dict>
+					<dict>
 						<key>baseValue</key>
 						<real>1</real>
 						<key>name</key>
@@ -301,7 +310,7 @@
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>0.019607841968536377</real>
+						<real>0.55333340167999268</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -313,7 +322,7 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
-							<real>0.019607841968536377</real>
+							<real>0.55333340167999268</real>
 						</array>
 					</dict>
 					<dict>
@@ -704,7 +713,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string></string>
+							<string>newLevels/level68/islands_NRM.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -726,7 +735,48 @@
 						<key>type</key>
 						<string>EffectControl</string>
 						<key>value</key>
-						<array/>
+						<array>
+							<dict>
+								<key>UUID</key>
+								<integer>925</integer>
+								<key>baseClass</key>
+								<string>CCEffectLighting</string>
+								<key>className</key>
+								<string>CCBPEffectLighting</string>
+								<key>properties</key>
+								<array>
+									<dict>
+										<key>name</key>
+										<string>shininess</string>
+										<key>type</key>
+										<string>Float</string>
+										<key>value</key>
+										<real>1</real>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>groups</string>
+										<key>type</key>
+										<string>TokenArray</string>
+										<key>value</key>
+										<array/>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>specularColor</string>
+										<key>type</key>
+										<string>Color4</string>
+										<key>value</key>
+										<array>
+											<real>0.1719890832901001</real>
+											<real>0.31777158379554749</real>
+											<real>0.17747905850410461</real>
+											<real>1</real>
+										</array>
+									</dict>
+								</array>
+							</dict>
+						</array>
 					</dict>
 				</array>
 			</dict>
@@ -1036,7 +1086,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string></string>
+							<string>newLevels/level68/movebig_NRM.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1058,7 +1108,48 @@
 						<key>type</key>
 						<string>EffectControl</string>
 						<key>value</key>
-						<array/>
+						<array>
+							<dict>
+								<key>UUID</key>
+								<integer>924</integer>
+								<key>baseClass</key>
+								<string>CCEffectLighting</string>
+								<key>className</key>
+								<string>CCBPEffectLighting</string>
+								<key>properties</key>
+								<array>
+									<dict>
+										<key>name</key>
+										<string>shininess</string>
+										<key>type</key>
+										<string>Float</string>
+										<key>value</key>
+										<real>0.90722894668579102</real>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>groups</string>
+										<key>type</key>
+										<string>TokenArray</string>
+										<key>value</key>
+										<array/>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>specularColor</string>
+										<key>type</key>
+										<string>Color4</string>
+										<key>value</key>
+										<array>
+											<real>0.23298761248588562</real>
+											<real>0.44394791126251221</real>
+											<real>0.23653265833854675</real>
+											<real>1</real>
+										</array>
+									</dict>
+								</array>
+							</dict>
+						</array>
 					</dict>
 				</array>
 				<key>seqExpanded</key>
@@ -1378,7 +1469,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string></string>
+							<string>newLevels/level68/movebig1_NRM.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1400,7 +1491,48 @@
 						<key>type</key>
 						<string>EffectControl</string>
 						<key>value</key>
-						<array/>
+						<array>
+							<dict>
+								<key>UUID</key>
+								<integer>923</integer>
+								<key>baseClass</key>
+								<string>CCEffectLighting</string>
+								<key>className</key>
+								<string>CCBPEffectLighting</string>
+								<key>properties</key>
+								<array>
+									<dict>
+										<key>name</key>
+										<string>shininess</string>
+										<key>type</key>
+										<string>Float</string>
+										<key>value</key>
+										<real>1</real>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>groups</string>
+										<key>type</key>
+										<string>TokenArray</string>
+										<key>value</key>
+										<array/>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>specularColor</string>
+										<key>type</key>
+										<string>Color4</string>
+										<key>value</key>
+										<array>
+											<real>0.23735526204109192</real>
+											<real>0.45561748743057251</real>
+											<real>0.24601143598556519</real>
+											<real>1</real>
+										</array>
+									</dict>
+								</array>
+							</dict>
+						</array>
 					</dict>
 				</array>
 				<key>seqExpanded</key>
@@ -1748,7 +1880,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string></string>
+							<string>newLevels/level68/movebig2_NRM.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1770,7 +1902,48 @@
 						<key>type</key>
 						<string>EffectControl</string>
 						<key>value</key>
-						<array/>
+						<array>
+							<dict>
+								<key>UUID</key>
+								<integer>922</integer>
+								<key>baseClass</key>
+								<string>CCEffectLighting</string>
+								<key>className</key>
+								<string>CCBPEffectLighting</string>
+								<key>properties</key>
+								<array>
+									<dict>
+										<key>name</key>
+										<string>shininess</string>
+										<key>type</key>
+										<string>Float</string>
+										<key>value</key>
+										<real>1</real>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>groups</string>
+										<key>type</key>
+										<string>TokenArray</string>
+										<key>value</key>
+										<array/>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>specularColor</string>
+										<key>type</key>
+										<string>Color4</string>
+										<key>value</key>
+										<array>
+											<real>0.20943155884742737</real>
+											<real>0.40763780474662781</real>
+											<real>0.22015956044197083</real>
+											<real>1</real>
+										</array>
+									</dict>
+								</array>
+							</dict>
+						</array>
 					</dict>
 				</array>
 				<key>seqExpanded</key>
@@ -2122,7 +2295,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string></string>
+							<string>newLevels/level68/movebig3_NRM.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -2144,7 +2317,48 @@
 						<key>type</key>
 						<string>EffectControl</string>
 						<key>value</key>
-						<array/>
+						<array>
+							<dict>
+								<key>UUID</key>
+								<integer>921</integer>
+								<key>baseClass</key>
+								<string>CCEffectLighting</string>
+								<key>className</key>
+								<string>CCBPEffectLighting</string>
+								<key>properties</key>
+								<array>
+									<dict>
+										<key>name</key>
+										<string>shininess</string>
+										<key>type</key>
+										<string>Float</string>
+										<key>value</key>
+										<real>1</real>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>groups</string>
+										<key>type</key>
+										<string>TokenArray</string>
+										<key>value</key>
+										<array/>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>specularColor</string>
+										<key>type</key>
+										<string>Color4</string>
+										<key>value</key>
+										<array>
+											<real>0.23298761248588562</real>
+											<real>0.44394791126251221</real>
+											<real>0.23653265833854675</real>
+											<real>1</real>
+										</array>
+									</dict>
+								</array>
+							</dict>
+						</array>
 					</dict>
 				</array>
 				<key>seqExpanded</key>
@@ -6806,8 +7020,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>22</real>
-							<real>351</real>
+							<real>21.570953369140625</real>
+							<real>348.51858520507812</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -8792,8 +9006,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -8947,11 +9159,34 @@
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
-				<string></string>
+				<string>MyBoss</string>
+				<key>customProperties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>pixelsX</string>
+						<key>optimized</key>
+						<false/>
+						<key>type</key>
+						<integer>0</integer>
+						<key>value</key>
+						<string>125</string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>pixelsY</string>
+						<key>optimized</key>
+						<false/>
+						<key>type</key>
+						<integer>0</integer>
+						<key>value</key>
+						<string>125</string>
+					</dict>
+				</array>
 				<key>displayName</key>
 				<string>octopus</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_boss</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -9040,6 +9275,201 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>effects</string>
+						<key>type</key>
+						<string>EffectControl</string>
+						<key>value</key>
+						<array/>
+					</dict>
+				</array>
+				<key>seqExpanded</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>880</integer>
+				<key>animatedProperties</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>scale</key>
+						<dict>
+							<key>keyframes</key>
+							<array>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>scale</string>
+									<key>time</key>
+									<real>0.0</real>
+									<key>type</key>
+									<integer>4</integer>
+									<key>value</key>
+									<array>
+										<real>5.4000000953674316</real>
+										<real>5.4000000953674316</real>
+									</array>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>scale</string>
+									<key>time</key>
+									<real>2.3333332538604736</real>
+									<key>type</key>
+									<integer>4</integer>
+									<key>value</key>
+									<array>
+										<real>4.8000001907348633</real>
+										<real>4.8000001907348633</real>
+									</array>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>scale</string>
+									<key>time</key>
+									<real>4.5333333015441895</real>
+									<key>type</key>
+									<integer>4</integer>
+									<key>value</key>
+									<array>
+										<real>5.4000000953674316</real>
+										<real>5.4000000953674316</real>
+									</array>
+								</dict>
+							</array>
+							<key>name</key>
+							<string>scale</string>
+							<key>type</key>
+							<integer>4</integer>
+						</dict>
+					</dict>
+				</dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>3</string>
+				<key>hidden</key>
+				<true/>
+				<key>memberVarAssignmentName</key>
+				<string>_rustyMask</string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>25</real>
+							<real>346</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>baseValue</key>
+						<array>
+							<real>5.4000000953674316</real>
+							<real>5.4000000953674316</real>
+						</array>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>4.8000001907348633</real>
+							<real>4.8000001907348633</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>spriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>rusty/3.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>normalMapSpriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string></string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>opacity</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.9100000262260437</real>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>0.9100000262260437</real>
 						</array>
 					</dict>
 					<dict>

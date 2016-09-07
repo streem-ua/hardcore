@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>461</integer>
+	<integer>466</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -301,7 +301,7 @@
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>0.77666664123535156</real>
+						<real>1</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -313,7 +313,7 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
-							<real>0.77666664123535156</real>
+							<real>1</real>
 						</array>
 					</dict>
 					<dict>
@@ -2249,7 +2249,7 @@
 						<key>value</key>
 						<array>
 							<real>396.4659423828125</real>
-							<real>175.85066223144531</real>
+							<real>166.24934387207031</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2583,7 +2583,7 @@
 						<key>value</key>
 						<array>
 							<real>307</real>
-							<real>134.21429443359375</real>
+							<real>129.80000305175781</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3431,7 +3431,7 @@
 						<key>value</key>
 						<array>
 							<real>68</real>
-							<real>15.49152660369873</real>
+							<real>24.186439514160156</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3753,7 +3753,7 @@
 						<key>value</key>
 						<array>
 							<real>450</real>
-							<real>279.79098510742188</real>
+							<real>283.67440795898438</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4491,7 +4491,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>185.24446105957031</real>
+							<real>163.67868041992188</real>
 							<real>68.800003051757812</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -7171,7 +7171,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-345.60003662109375</real>
+						<real>-360</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -7498,7 +7498,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-345.60003662109375</real>
+						<real>-360</real>
 					</dict>
 				</array>
 				<key>seqExpanded</key>
@@ -7884,8 +7884,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>261.09832763671875</real>
-							<real>328.79998779296875</real>
+							<real>206</real>
+							<real>168.68923950195312</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -8437,8 +8437,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>261.09832763671875</real>
-							<real>328.79998779296875</real>
+							<real>206</real>
+							<real>168.68923950195312</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -8482,8 +8482,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -8519,7 +8517,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>14</real>
+							<real>8.5</real>
 							<real>82</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -8558,7 +8556,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>rusty/rusty123.png</string>
+							<string>rusty/!11!.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -8594,6 +8592,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -8729,8 +8729,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>4.8051948547363281</real>
-							<real>4.8051948547363281</real>
+							<real>4.6818180084228516</real>
+							<real>4.6818180084228516</real>
 							<true/>
 							<integer>0</integer>
 						</array>
@@ -8916,7 +8916,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>2.4333333969116211</real>
+			<real>3.0666666030883789</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

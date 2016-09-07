@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>3207</integer>
+	<integer>3213</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -1990,7 +1990,7 @@
 								<key>type</key>
 								<string>Integer</string>
 								<key>value</key>
-								<integer>1</integer>
+								<integer>5</integer>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -4533,8 +4533,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>499.13284301757812</real>
-							<real>283.16781616210938</real>
+							<real>101.13284301757812</real>
+							<real>148.23214721679688</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4562,6 +4562,8 @@
 						<string>newLevels/crystal/right.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

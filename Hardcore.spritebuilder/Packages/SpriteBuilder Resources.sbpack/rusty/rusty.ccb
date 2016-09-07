@@ -180,7 +180,7 @@
 			<key>allowsRotation</key>
 			<false/>
 			<key>bodyShape</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>collisionCategories</key>
 			<array/>
 			<key>collisionMask</key>
@@ -188,7 +188,7 @@
 			<key>collisionType</key>
 			<string></string>
 			<key>cornerRadius</key>
-			<real>0.0</real>
+			<real>7.5</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -200,221 +200,12 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>2.601806640625</real>
-					<real>4.85595703125</real>
-				</array>
-				<array>
-					<real>2.59912109375</real>
-					<real>19.9541015625</real>
-				</array>
-				<array>
-					<real>3.22412109375</real>
-					<real>21.312744140625</real>
-				</array>
-				<array>
-					<real>4.58251953125</real>
-					<real>22.41845703125</real>
-				</array>
-				<array>
-					<real>6.52001953125</real>
-					<real>22.40185546875</real>
-				</array>
-				<array>
-					<real>8.09912109375</real>
-					<real>21.46435546875</real>
-				</array>
-				<array>
-					<real>12.666748046875</real>
-					<real>20.858642578125</real>
-				</array>
-				<array>
-					<real>15.666748046875</real>
-					<real>21.236083984375</real>
-				</array>
-				<array>
-					<real>17.085208892822266</real>
-					<real>22.30126953125</real>
-				</array>
-				<array>
-					<real>19.058353424072266</real>
-					<real>22.236083984375</real>
-				</array>
-				<array>
-					<real>20.392581939697266</real>
-					<real>20.92626953125</real>
-				</array>
-				<array>
-					<real>20.457523345947266</real>
-					<real>5.7985849380493164</real>
-				</array>
-				<array>
-					<real>20.441165924072266</real>
-					<real>3.78466796875</real>
-				</array>
-				<array>
-					<real>19.020023345947266</real>
-					<real>2.36376953125</real>
-				</array>
-				<array>
-					<real>17.351810455322266</real>
-					<real>1.9453125</real>
-				</array>
-				<array>
-					<real>15.5380859375</real>
-					<real>2.812744140625</real>
-				</array>
-				<array>
-					<real>7.7421875</real>
-					<real>2.937744140625</real>
-				</array>
-				<array>
-					<real>6.80712890625</real>
-					<real>2.18505859375</real>
-				</array>
-				<array>
-					<real>5.131103515625</real>
-					<real>1.87255859375</real>
-				</array>
-				<array>
-					<real>3.212646484375</real>
-					<real>3.12255859375</real>
+					<real>8.3924350738525391</real>
+					<real>7.9741339683532715</real>
 				</array>
 			</array>
 			<key>polygons</key>
-			<array>
-				<array>
-					<array>
-						<real>3.212646484375</real>
-						<real>3.12255859375</real>
-					</array>
-					<array>
-						<real>5.131103515625</real>
-						<real>1.87255859375</real>
-					</array>
-					<array>
-						<real>6.80712890625</real>
-						<real>2.18505859375</real>
-					</array>
-					<array>
-						<real>7.7421875</real>
-						<real>2.937744140625</real>
-					</array>
-				</array>
-				<array>
-					<array>
-						<real>15.5380859375</real>
-						<real>2.812744140625</real>
-					</array>
-					<array>
-						<real>17.351810455322266</real>
-						<real>1.9453125</real>
-					</array>
-					<array>
-						<real>19.020023345947266</real>
-						<real>2.36376953125</real>
-					</array>
-					<array>
-						<real>20.441165924072266</real>
-						<real>3.78466796875</real>
-					</array>
-				</array>
-				<array>
-					<array>
-						<real>20.392581939697266</real>
-						<real>20.92626953125</real>
-					</array>
-					<array>
-						<real>19.058353424072266</real>
-						<real>22.236083984375</real>
-					</array>
-					<array>
-						<real>17.085208892822266</real>
-						<real>22.30126953125</real>
-					</array>
-					<array>
-						<real>15.666748046875</real>
-						<real>21.236083984375</real>
-					</array>
-				</array>
-				<array>
-					<array>
-						<real>20.457523345947266</real>
-						<real>5.7985849380493164</real>
-					</array>
-					<array>
-						<real>20.392581939697266</real>
-						<real>20.92626953125</real>
-					</array>
-					<array>
-						<real>15.666748046875</real>
-						<real>21.236083984375</real>
-					</array>
-					<array>
-						<real>12.666748046875</real>
-						<real>20.858642578125</real>
-					</array>
-				</array>
-				<array>
-					<array>
-						<real>8.09912109375</real>
-						<real>21.46435546875</real>
-					</array>
-					<array>
-						<real>6.52001953125</real>
-						<real>22.40185546875</real>
-					</array>
-					<array>
-						<real>4.58251953125</real>
-						<real>22.41845703125</real>
-					</array>
-					<array>
-						<real>3.22412109375</real>
-						<real>21.312744140625</real>
-					</array>
-				</array>
-				<array>
-					<array>
-						<real>3.22412109375</real>
-						<real>21.312744140625</real>
-					</array>
-					<array>
-						<real>2.59912109375</real>
-						<real>19.9541015625</real>
-					</array>
-					<array>
-						<real>2.601806640625</real>
-						<real>4.85595703125</real>
-					</array>
-					<array>
-						<real>3.212646484375</real>
-						<real>3.12255859375</real>
-					</array>
-					<array>
-						<real>7.7421875</real>
-						<real>2.937744140625</real>
-					</array>
-					<array>
-						<real>15.5380859375</real>
-						<real>2.812744140625</real>
-					</array>
-					<array>
-						<real>20.441165924072266</real>
-						<real>3.78466796875</real>
-					</array>
-					<array>
-						<real>20.457523345947266</real>
-						<real>5.7985849380493164</real>
-					</array>
-					<array>
-						<real>12.666748046875</real>
-						<real>20.858642578125</real>
-					</array>
-					<array>
-						<real>8.09912109375</real>
-						<real>21.46435546875</real>
-					</array>
-				</array>
-			</array>
+			<array/>
 		</dict>
 		<key>properties</key>
 		<array>
@@ -472,7 +263,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>rusty/4-3.png</string>
+					<string>rusty/2-5.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -563,7 +354,7 @@
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
-			<real>2.34375</real>
+			<real>1.6328125</real>
 			<key>position</key>
 			<real>0.0</real>
 			<key>resolution</key>
