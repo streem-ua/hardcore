@@ -451,10 +451,6 @@
 -(void) manageArrays{
     
     
-    
-    
-    
-
     //Прочитать
     
     

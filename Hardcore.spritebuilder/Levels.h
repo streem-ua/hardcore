@@ -51,6 +51,7 @@
 
 
 -(CGPoint)getRustyPosition;
+-(void)setRustyPosition:(CGPoint) newPosition;
 
 @property BOOL rightFirstPressed;
 @property BOOL leftFirstPressed;
@@ -71,4 +72,7 @@
 
 
 -(void) initLevelFromString:(NSString *)levelName;
+
+-(void) setFreeze:(BOOL) freeze;
+
 @end

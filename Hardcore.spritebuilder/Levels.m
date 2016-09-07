@@ -11,6 +11,8 @@
 #import "TypewriteTxt.h"
 #import "FifteenItem.h"
 #import "MyBoss.h"
+#import "CCBSequence.h"
+#import "MovingPlatform.h"
 
 
 @implementation Levels {
@@ -29,7 +31,7 @@
     //    CCSprite *_upPortal;
     //    CCSprite *_downPortal;
     
-    CCSprite *_movingPlatform;
+    CCNode *_freezeNodes;
     
     
     CCNode *movedown;
@@ -134,6 +136,15 @@
     BOOL bossDefeated;
     
     
+    CCNode *_movingPlatform;
+    
+    
+    float stoppedAnimationTime;
+    BOOL freezeEnabled;
+    BOOL freezeTimelineReturned;
+    
+    CCNode *_bossCustom;
+    
     }
 
 /*
@@ -207,8 +218,9 @@
    // NSLog(@"-----000000 THE GREAT LEVELS DIDLOAD");
     
     
-    
-    
+    stoppedAnimationTime = 0;
+    freezeEnabled = NO;
+    freezeTimelineReturned = YES;
     //[self.gameplayParrentDelegate testFunc];
     
     bossDefeated = NO;
@@ -386,9 +398,21 @@
     _rustyPosition.visible = NO;
     
     
+    
+    
+
+
+    
+    
+    
 }
 
 
+
+-(void)setRustyPosition:(CGPoint) newPosition{
+    _rustyPosition.position = newPosition;
+    
+}
 
 
 -(CGPoint)getRustyPosition{
@@ -658,7 +682,7 @@
     
     
     CGRect rustyRectCatch = CGRectMake(rustyX-50, rustyY-50, 100, 100);
-    
+    CGRect bossCustomRect = CGRectMake(_bossCustom.position.x, _bossCustom.position.y, _bossCustom.boundingBox.size.width, _bossCustom.boundingBox.size.height);
     
     
     
@@ -828,10 +852,19 @@
         bossDefeated = NO;
         _boss.visible = YES;
         
+<<<<<<< HEAD
 
     
 
     }
+=======
+        
+        
+        
+    }
+    
+    
+>>>>>>> 70fa27cfee7f94d281637607e1b4cc1e6873fdc2
     
     if(!CGRectContainsPoint(rustyPortalCatchOut, tmpNode.position) && afterReachedTrigger){
         
@@ -1083,10 +1116,24 @@
     
     
     
-    //    if(_bullet.position.x < 10){
-    //        _bullet.position = ccp(487, 105);
-    //    }
-    //    _bullet.position = ccpAdd(_bullet.position, ccpMult(ccp(-130, 0), delta));
+    
+    
+    if([[NSString stringWithFormat:@"%.1f",stoppedAnimationTime]floatValue] == [[NSString stringWithFormat:@"%.1f",self.animationManager.runningSequence.time]floatValue] && !freezeTimelineReturned){
+        
+        freezeTimelineReturned = YES;
+        
+        [self.animationManager setPaused:YES];
+        [self.animationManager jumpToSequenceNamed:@"Light" time:stoppedAnimationTime];
+        [self.animationManager setPaused:NO];
+        
+    }
+ 
+    
+    
+    
+    
+    
+    
     
 }
 
@@ -1395,6 +1442,62 @@
     [self.gameplayParrentDelegate.rusty runAction:scaleUpAction];
     [self.gameplayParrentDelegate.rusty runAction:moveByAction];
     
+}
+
+
+
+-(void) freezeAnimationStarted {
+   
+    
+    for (CCNode *node in [self children]) {
+    
+        if(![node isKindOfClass:[MovingPlatform class]]){
+            if(node != self._rustyMask){
+                node.position = node.oldPosition;
+            }
+        }
+        
+    }
+}
+
+-(void) setFreeze:(BOOL) freeze{
+    
+    
+    
+    if(freeze){
+        
+        
+//        freezeTimelineReturned = NO;
+        
+        for (CCNode *node in [self children]) {
+            node.oldPosition = node.position;
+        }
+        
+        
+        
+        stoppedAnimationTime = self.animationManager.runningSequence.time;
+        
+        [self.animationManager setPaused:YES];
+        [self.animationManager jumpToSequenceNamed:@"notFreeze" time:stoppedAnimationTime];
+        [self.animationManager setPaused:NO];
+        
+        
+        for (CCNode *node in [self children]) {
+            node.position = node.oldPosition;
+        }
+        
+        
+        
+    } else {
+        freezeTimelineReturned = NO;
+        //[self.animationManager setPaused:YES];
+        //[self.animationManager jumpToSequenceNamed:@"Light" time:stoppedAnimationTime];
+        //[self.animationManager setPaused:NO];
+        
+        
+    }
+    
+    freezeEnabled = freeze;
 }
 
 

@@ -151,6 +151,7 @@ static NSUInteger globalOrderOfArrival = 1;
 		_rotationalSkewX = _rotationalSkewY = 0.0f;
 		_scaleX = _scaleY = 1.0f;
         _position = CGPointZero;
+        _oldPosition = CGPointZero;
         _contentSize = CGSizeZero;
 		_anchorPointInPoints = _anchorPoint = CGPointZero;
 

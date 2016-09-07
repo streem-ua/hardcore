@@ -91,6 +91,9 @@
 
 -(void) showBossStory:(int) bossLevelId;
 -(void) removeBossStory;
+-(void) freezeLevel:(BOOL)freeze;
+-(void) addNewCheckPoint;
+-(void) switchLightOff;
 
 
 @property NSUserDefaults *myFifteenSaved;

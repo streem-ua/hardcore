@@ -19,6 +19,16 @@
     CCLabelTTF *_bestTimeTxt;
     CCLabelTTF *_deathTxt;
     
+    
+    CCLabelTTF *_freezeTxt;
+    BOOL freezeEnabled;
+    
+    CCLabelTTF *_lightTxt;
+    BOOL lightEnabled;
+    
+    CCLabelTTF *_teleportTxt;
+    BOOL checkpointEnabled;
+    
     CCNode *gradientBg;
     float currentPercentValue;
     
@@ -52,8 +62,9 @@
         levelMinutes = 0;
         
         
-        
-        
+        freezeEnabled = NO;
+        lightEnabled = NO;
+        checkpointEnabled = NO;
         
     }
     return self;
@@ -155,13 +166,18 @@
         //Back
         moveMenu = [CCActionMoveTo actionWithDuration:0.2 position:ccp([[CCDirector sharedDirector] viewSize].width, 0)];
         self.rightMenuEnabled = NO;
-        [self.gameplayParrentDelegate resumeGamePlayScene];
+        
+        
+        
+        //[self.gameplayParrentDelegate resumeGamePlayScene];
+        
         
     } else if(direction ==2){
         //forward
         moveMenu = [CCActionMoveTo actionWithDuration:0.2 position:ccp([[CCDirector sharedDirector] viewSize].width-150, 0)];
         self.rightMenuEnabled = YES;
-        [self.gameplayParrentDelegate pauseGamePlayScene];
+        
+        //[self.gameplayParrentDelegate pauseGamePlayScene];
         
     }
     
@@ -186,5 +202,69 @@
     [self runAction:moveMenu];
 }
 
+
+
+-(void) perkAction:(CCButton *)sender{
+    
+    
+//    NSLog(@"ads");
+    NSString *myFlag;
+    
+    if([sender.name  isEqual: @"freeze"]){
+    
+        if(freezeEnabled){
+            freezeEnabled = NO;
+        } else {
+            freezeEnabled = YES;
+        }
+        
+        
+        [self.gameplayParrentDelegate freezeLevel:freezeEnabled];
+        myFlag = freezeEnabled ? @"ON" : @"OFF";
+        
+        [_freezeTxt setString:myFlag];
+        
+        
+    } else if([sender.name  isEqual: @"light"]){
+        
+        if(lightEnabled){
+            lightEnabled = NO;
+        } else {
+            lightEnabled = YES;
+        }
+        
+        myFlag = lightEnabled ? @"ON" : @"OFF";
+        
+        [_lightTxt setString:myFlag];
+        
+        
+        [self.gameplayParrentDelegate switchLightOff];
+        
+        
+    } else if([sender.name  isEqual: @"checkpoint"]){
+        
+        if(checkpointEnabled){
+            checkpointEnabled = NO;
+        } else {
+            checkpointEnabled = YES;
+        }
+        
+        myFlag = checkpointEnabled ? @"ON" : @"OFF";
+        
+        [_teleportTxt setString:myFlag];
+        
+        
+        [self.gameplayParrentDelegate addNewCheckPoint];
+        
+        
+        
+    }
+    
+    
+    
+
+    
+    
+}
 
 @end
