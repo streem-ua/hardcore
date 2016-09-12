@@ -10,17 +10,13 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-<<<<<<< HEAD
-	<integer>3449</integer>
-=======
-	<integer>3941</integer>
->>>>>>> 70fa27cfee7f94d281637607e1b4cc1e6873fdc2
+	<integer>3953</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
 	<integer>1</integer>
 	<key>currentSequenceId</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>docDimensionsType</key>
 	<integer>2</integer>
 	<key>fileType</key>
@@ -2607,8 +2603,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>316.90118408203125</real>
-							<real>125.69999694824219</real>
+							<real>316.89999389648438</real>
+							<real>125.68059539794922</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2723,8 +2719,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2985,7 +2979,7 @@
 						<key>value</key>
 						<array>
 							<real>450.35443115234375</real>
-							<real>298.06878662109375</real>
+							<real>303</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3355,7 +3349,7 @@
 						<key>value</key>
 						<array>
 							<real>151.66282653808594</real>
-							<real>78.478614807128906</real>
+							<real>83.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3672,8 +3666,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>47.365745544433594</real>
-							<real>48.900001525878906</real>
+							<real>46</real>
+							<real>45.900001525878906</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4150,8 +4144,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>287.400146484375</real>
-							<real>347.96270751953125</real>
+							<real>286.10000610351562</real>
+							<real>293.60000610351562</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4195,6 +4189,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -4468,8 +4464,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>286.14080810546875</real>
-							<real>293.61404418945312</real>
+							<real>286.10000610351562</real>
+							<real>293.60000610351562</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4969,8 +4965,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>286.66278076171875</real>
-							<real>293.16204833984375</real>
+							<real>94.199996948242188</real>
+							<real>221.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -5291,8 +5287,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>114.1500244140625</real>
-							<real>221.54476928710938</real>
+							<real>94.199996948242188</real>
+							<real>221.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -6680,7 +6676,7 @@
 						<key>value</key>
 						<array>
 							<real>380.75</real>
-							<real>146.02297973632812</real>
+							<real>166</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -6980,8 +6976,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>380.64044189453125</real>
-							<real>21.469213485717773</real>
+							<real>380.75</real>
+							<real>166</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -7025,8 +7021,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -7162,8 +7156,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>4</real>
-							<real>4</real>
+							<real>4.8000001907348633</real>
+							<real>4.8000001907348633</real>
 							<true/>
 							<integer>0</integer>
 						</array>
@@ -7482,7 +7476,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>4</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -7527,7 +7521,7 @@
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>length</key>
 			<real>4</real>
 			<key>name</key>
@@ -7535,7 +7529,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>2.3333332538604736</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

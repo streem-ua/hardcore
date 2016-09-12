@@ -28,7 +28,7 @@
 
 - (int) getActivePuzzleNumber;
 - (int) getTestActivePuzzleNumber;
-
+-(void) setRustyRandomSpeed;
 - (void) startFromPuzzle:(CCNode *)sender;
 //(CCButton *)sender
 
@@ -39,6 +39,7 @@
 @property NSTimer *portalTimer;
 
 
+@property int defaultRustySpeed;
 
 @property BOOL portalTimerCreated;
 @property BOOL rustyMoving;

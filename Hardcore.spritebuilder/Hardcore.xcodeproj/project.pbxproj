@@ -1606,6 +1606,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/armv7a",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -1655,6 +1656,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/armv7a",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",

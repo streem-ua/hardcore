@@ -21,7 +21,6 @@
 @property CCSprite *myBg;
 @property BOOL fifteenEnabled;
 
-
 @property GamePlay *gameplayParrentDelegate;
 
 
@@ -70,6 +69,7 @@
 @property BOOL rightPortallFirstReached;
 @property CCNode *arrow1;
 
+-(void) nullSpeedContainers;
 
 -(void) initLevelFromString:(NSString *)levelName;
 

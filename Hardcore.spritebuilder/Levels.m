@@ -135,6 +135,10 @@
     BOOL levelFinishedLoading;
     BOOL bossDefeated;
     
+    BOOL _speedContainer1Catched;
+    BOOL _speedContainer2Catched;
+    BOOL _speedContainer3Catched;
+    BOOL _speedContainer4Catched;
     
     CCNode *_movingPlatform;
     
@@ -143,7 +147,11 @@
     BOOL freezeEnabled;
     BOOL freezeTimelineReturned;
     
-    CCNode *_bossCustom;
+    CCNode *_speedContainer1;
+    CCNode *_speedContainer2;
+    CCNode *_speedContainer3;
+    CCNode *_speedContainer4;
+   
     
     }
 
@@ -208,6 +216,10 @@
     self = [super init];
     if (self) {
         levelFinishedLoading = NO;
+         _speedContainer1Catched = NO;
+         _speedContainer2Catched = NO;
+         _speedContainer3Catched = NO;
+         _speedContainer4Catched = NO;
     }
     return self;
 }
@@ -682,7 +694,7 @@
     
     
     CGRect rustyRectCatch = CGRectMake(rustyX-50, rustyY-50, 100, 100);
-    CGRect bossCustomRect = CGRectMake(_bossCustom.position.x, _bossCustom.position.y, _bossCustom.boundingBox.size.width, _bossCustom.boundingBox.size.height);
+//    CGRect bossCustomRect = CGRectMake(_bossCustom.position.x, _bossCustom.position.y, _bossCustom.boundingBox.size.width, _bossCustom.boundingBox.size.height);
     
     
     
@@ -691,6 +703,40 @@
     
     CGRect rustyPortalCatch = CGRectMake(rustyX-10, rustyY-10, 20, 20);
     CGRect rustyPortalCatchOut = CGRectMake(rustyX-16, rustyY-16, 32, 32);
+    
+    
+    
+    if(!_speedContainer1Catched && CGRectContainsPoint(CGRectMake(_speedContainer1.position.x, _speedContainer1.position.y, _speedContainer1.boundingBox.size.width, _speedContainer1.boundingBox.size.height), ccp(rustyX, rustyY))){
+        _speedContainer1Catched = YES;
+        _speedContainer2Catched = NO;
+        _speedContainer3Catched = NO;
+        _speedContainer4Catched = NO;
+        [self.gameplayParrentDelegate setRustyRandomSpeed];
+    }
+    
+    if(!_speedContainer2Catched && CGRectContainsPoint(CGRectMake(_speedContainer2.position.x, _speedContainer2.position.y, _speedContainer2.boundingBox.size.width, _speedContainer2.boundingBox.size.height), ccp(rustyX, rustyY))){
+        _speedContainer2Catched = YES;
+        _speedContainer1Catched = NO;
+        _speedContainer3Catched = NO;
+        _speedContainer4Catched = NO;
+        [self.gameplayParrentDelegate setRustyRandomSpeed];
+    }
+    
+    if(!_speedContainer3Catched && CGRectContainsPoint(CGRectMake(_speedContainer3.position.x, _speedContainer3.position.y, _speedContainer3.boundingBox.size.width, _speedContainer3.boundingBox.size.height), ccp(rustyX, rustyY))){
+        _speedContainer3Catched = YES;
+        _speedContainer2Catched = NO;
+        _speedContainer1Catched = NO;
+        _speedContainer4Catched = NO;
+        [self.gameplayParrentDelegate setRustyRandomSpeed];
+    }
+    
+    if(!_speedContainer4Catched && CGRectContainsPoint(CGRectMake(_speedContainer4.position.x, _speedContainer4.position.y, _speedContainer4.boundingBox.size.width, _speedContainer4.boundingBox.size.height), ccp(rustyX, rustyY))){
+        _speedContainer4Catched = YES;
+        _speedContainer2Catched = NO;
+        _speedContainer3Catched = NO;
+        _speedContainer1Catched = NO;
+        [self.gameplayParrentDelegate setRustyRandomSpeed];
+    }
     
     
     /*
@@ -852,19 +898,12 @@
         bossDefeated = NO;
         _boss.visible = YES;
         
-<<<<<<< HEAD
-
-    
 
     }
-=======
-        
-        
-        
-    }
+
     
     
->>>>>>> 70fa27cfee7f94d281637607e1b4cc1e6873fdc2
+
     
     if(!CGRectContainsPoint(rustyPortalCatchOut, tmpNode.position) && afterReachedTrigger){
         
@@ -1458,6 +1497,13 @@
         }
         
     }
+}
+
+-(void) nullSpeedContainers{
+    _speedContainer1Catched = NO;
+    _speedContainer2Catched = NO;
+    _speedContainer3Catched = NO;
+    _speedContainer4Catched = NO;
 }
 
 -(void) setFreeze:(BOOL) freeze{

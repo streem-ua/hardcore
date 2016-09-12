@@ -67,8 +67,6 @@
     int rustySpeed;
     int rustyJump;
     
-   
-    
     MainMenu *mainMenu;
     
     
@@ -110,7 +108,8 @@
     
     BOOL freezeEnabled;
     
-    }
+
+}
 
 
 - (instancetype)init
@@ -180,6 +179,7 @@
     
     rustySpeed = 88;
     rustyJump = 36;
+    self.defaultRustySpeed = 88;
     
     
     //gameImageButtons = [CCBReader load:@"game_buttons"];
@@ -838,8 +838,8 @@
                 
                 if(self.activePuzzleNumber == 1){
                     
-                    levelName = @"newLevels/level37/level37";
-                    
+                    levelName = @"newLevels/level62/level62";
+              
                     
                 } else if(self.activePuzzleNumber == 4){
                     
@@ -1014,6 +1014,15 @@
     
 }
 
+- (int)randomValueBetween:(int)min and:(int)max {
+    return (int)(min + arc4random_uniform(max - min + 1));
+}
+
+-(void) setRustyRandomSpeed{
+    int tempRustySpeed = [self randomValueBetween:61 and:251];
+    rustySpeed = tempRustySpeed;
+    NSLog(@"tempRustySpeed = %i", tempRustySpeed);
+}
 
 -(void) clearLevels{
     [_levelNode removeChildByName:@"levels" cleanup:YES];
@@ -1182,7 +1191,8 @@
 
         self.rusty.visible = NO;
         
-    
+        [levels nullSpeedContainers];
+        
     [respawnAnimation.animationManager jumpToSequenceNamed:@"timeline" time:0.0];
     [respawnAnimation.animationManager runAnimationsForSequenceNamed:@"timeline"];
     
@@ -1594,6 +1604,8 @@
 {
     
     self.rustyIsDead = YES;
+    
+    rustySpeed = self.defaultRustySpeed;
     
     self.rusty.physicsBody.velocity = ccp(0,0);
     _forwardMarch = FALSE;
