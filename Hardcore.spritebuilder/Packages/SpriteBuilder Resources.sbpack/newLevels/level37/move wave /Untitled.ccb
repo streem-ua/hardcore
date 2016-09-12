@@ -74,7 +74,7 @@
 									<key>name</key>
 									<string>opacity</string>
 									<key>time</key>
-									<real>0.26666668057441711</real>
+									<real>0.46666666865348816</real>
 									<key>type</key>
 									<integer>10</integer>
 									<key>value</key>
@@ -117,7 +117,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.3333333432674408</real>
+									<real>0.46666666865348816</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -135,7 +135,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.69999998807907104</real>
+									<real>0.83333331346511841</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -181,7 +181,7 @@
 									<key>name</key>
 									<string>scale</string>
 									<key>time</key>
-									<real>0.3333333432674408</real>
+									<real>0.46666666865348816</real>
 									<key>type</key>
 									<integer>4</integer>
 									<key>value</key>
@@ -360,7 +360,7 @@
 									<key>name</key>
 									<string>opacity</string>
 									<key>time</key>
-									<real>0.5</real>
+									<real>0.96666663885116577</real>
 									<key>type</key>
 									<integer>10</integer>
 									<key>value</key>
@@ -403,7 +403,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.5</real>
+									<real>0.96666663885116577</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -421,7 +421,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.69999998807907104</real>
+									<real>1.1666666269302368</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -467,7 +467,7 @@
 									<key>name</key>
 									<string>scale</string>
 									<key>time</key>
-									<real>0.56666666269302368</real>
+									<real>1.0333333015441895</real>
 									<key>type</key>
 									<integer>4</integer>
 									<key>value</key>
@@ -519,7 +519,7 @@
 						<key>value</key>
 						<array>
 							<real>-93.599998474121094</real>
-							<real>-210</real>
+							<real>81.666610717773438</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -548,8 +548,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.5</real>
+							<real>0.5161290168762207</real>
+							<real>0.5161290168762207</real>
 							<true/>
 							<integer>0</integer>
 						</array>
@@ -879,7 +879,7 @@
 									<key>name</key>
 									<string>opacity</string>
 									<key>time</key>
-									<real>0.66666668653488159</real>
+									<real>0.80000001192092896</real>
 									<key>type</key>
 									<integer>10</integer>
 									<key>value</key>
@@ -922,7 +922,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.66666668653488159</real>
+									<real>0.80000001192092896</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -940,7 +940,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.69999998807907104</real>
+									<real>0.83333331346511841</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -986,7 +986,7 @@
 									<key>name</key>
 									<string>scale</string>
 									<key>time</key>
-									<real>0.66666668653488159</real>
+									<real>0.80000001192092896</real>
 									<key>type</key>
 									<integer>4</integer>
 									<key>value</key>
@@ -1165,7 +1165,7 @@
 									<key>name</key>
 									<string>opacity</string>
 									<key>time</key>
-									<real>0.69999998807907104</real>
+									<real>1.0666667222976685</real>
 									<key>type</key>
 									<integer>10</integer>
 									<key>value</key>
@@ -1208,7 +1208,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.69999998807907104</real>
+									<real>1.0666667222976685</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -1226,7 +1226,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.76666665077209473</real>
+									<real>1.1333333253860474</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -1278,7 +1278,7 @@
 						<key>value</key>
 						<array>
 							<real>-50</real>
-							<real>-210</real>
+							<real>113.076904296875</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1338,7 +1338,7 @@
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>0.076923131942749023</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1350,7 +1350,7 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
-							<real>0.0</real>
+							<real>0.076923131942749023</real>
 						</array>
 					</dict>
 					<dict>
@@ -1403,7 +1403,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.80000001192092896</real>
+									<real>1.2000000476837158</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -1454,7 +1454,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>-490.66665649414062</real>
+							<real>-426.66665649414062</real>
 							<real>0.0</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1493,7 +1493,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>newLevels/level37/move wave /newwave.png</string>
+							<string>newLevels/level37/move wave /24.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1570,7 +1570,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.80000001192092896</real>
+									<real>1.2000000476837158</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -1621,7 +1621,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>21.333343505859375</real>
+							<real>85.333343505859375</real>
 							<real>0.0</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1660,7 +1660,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>newLevels/level37/move wave /newwave.png</string>
+							<string>newLevels/level37/move wave /24.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1819,13 +1819,13 @@
 			<key>chainedSequenceId</key>
 			<integer>0</integer>
 			<key>length</key>
-			<real>0.80000001192092896</real>
+			<real>1.2000000476837158</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.76666665077209473</real>
+			<real>1</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
