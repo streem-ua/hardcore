@@ -2286,7 +2286,11 @@
 
 }
 
+-(void) showWinAnimation {
 
+    [fifteen showWinAnimation];
+
+}
 
 -(void) freezeLevel:(BOOL)freeze {
     freezeEnabled = freeze;

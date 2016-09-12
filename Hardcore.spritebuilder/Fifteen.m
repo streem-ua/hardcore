@@ -950,6 +950,260 @@
 
 
 
+-(void) showWinAnimation {
+    [self.gameplayParrentDelegate pauseGamePlayScene];
+    
+    
+    [resultsBar startAnimation: activePuzzleNumber];
+    [resultsBar updateTime:self.gameplayParrentDelegate.levelMinutes andSeconds:self.gameplayParrentDelegate.levelSeconds];
+    [self.gameplayParrentDelegate showFifteen];
+    
+    
+    FifteenItem *item = [[FifteenItem alloc] init];
+    
+    item.isFifteenOpened = @YES;
+    item.fifteenDeath = [NSNumber numberWithInt:resultsBar.fifteenDeath];
+    item.fifteenMoves = [NSNumber numberWithInt:resultsBar.fifteenMoves];
+    item.fifteenMinutesPassed = [NSNumber numberWithInt:self.gameplayParrentDelegate.levelMinutes];
+    item.fifteenSecondsPassed = [NSNumber numberWithInt:self.gameplayParrentDelegate.levelSeconds];
+    
+    item.fifteenEtaDeath = readItem.fifteenEtaDeath;
+    item.fifteenEtaMoves = readItem.fifteenEtaMoves;
+    item.fifteenEtaMinutesPassed = readItem.fifteenEtaMinutesPassed;
+    item.fifteenEtaSecondsPassed = readItem.fifteenEtaSecondsPassed;
+    
+    item.fifteenPositions = readItem.fifteenPositions;
+    
+    item.isBossDefeated = readItem.isBossDefeated;
+    
+    //        item.fifteenPositionsShuffled = readItem.fifteenPositionsShuffled;
+    
+    
+    
+    switch (activePuzzleNumber) {
+        case 1:
+            
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:1.3]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:2.1]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:17 withObject: [NSNumber numberWithFloat:3.5]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:13 withObject: [NSNumber numberWithFloat:4.2]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:5.6]];
+            
+            break;
+            
+            
+        case 2:
+            
+            
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:1.3]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:2.1]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:3.6]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:17 withObject: [NSNumber numberWithFloat:4.5]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:5.4]];
+            
+            break;
+            
+            
+            
+        case 3:
+            
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:18 withObject: [NSNumber numberWithFloat:1.3]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:2.6]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:3.4]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:4.2]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:5.2]];
+            
+            break;
+            
+            
+            
+        case 4:
+            
+            
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:1.1]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:2.6]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:13 withObject: [NSNumber numberWithFloat:3.2]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:4.3]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:17 withObject: [NSNumber numberWithFloat:5.5]];
+            
+            break;
+            
+            
+            
+        case 5:
+            
+            
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:1.2]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:2.5]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:6 withObject: [NSNumber numberWithFloat:3.4]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:4.3]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:17 withObject: [NSNumber numberWithFloat:5.6]];
+            
+            break;
+            
+            
+        case 6:
+            
+            
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:1.6]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:17 withObject: [NSNumber numberWithFloat:2.3]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:3.1]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:13 withObject: [NSNumber numberWithFloat:4.5]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:5.4]];
+            
+            break;
+            
+            
+        case 7:
+            
+            
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:1.5]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:2.4]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:3.1]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:4.6]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:5.2]];
+            
+            break;
+            
+            
+        case 8:
+            
+            
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:1.2]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:2.4]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:18 withObject: [NSNumber numberWithFloat:3.1]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:4.5]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:13 withObject: [NSNumber numberWithFloat:5.6]];
+            
+            break;
+            
+            
+        case 9:
+            
+            
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:1.1]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:6 withObject: [NSNumber numberWithFloat:2.6]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:3.3]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:4.5]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:5.2]];
+            
+            break;
+            
+            
+        case 10:
+            
+            
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:6 withObject: [NSNumber numberWithFloat:1.2]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:2.3]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:3.5]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:4.4]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:5.1]];
+            
+            break;
+            
+        case 11:
+            
+            
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:1.3]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:2.2]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:6 withObject: [NSNumber numberWithFloat:3.4]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:4.1]];
+            [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:5.6]];
+            
+            break;
+            
+            
+            
+            
+            
+            
+            
+        default:
+            break;
+    }
+    
+    
+    
+    
+    
+    item.currentFifteenLevel = @1;
+    
+    NSData *itemData = [NSKeyedArchiver archivedDataWithRootObject:item];
+    [[NSUserDefaults standardUserDefaults] setObject:itemData forKey:[NSString stringWithFormat:@"%d", activePuzzleNumber]];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
+    
+    
+    
+    
+    //        NSLog(@"readItemTest.fifteenMoves = %@", readItemTest.fifteenMoves);
+    
+    NSData *readItemDataNext = [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%d", activePuzzleNumber+1]];
+    FifteenItem *readItemNext = [NSKeyedUnarchiver unarchiveObjectWithData:readItemDataNext];
+    
+    
+    FifteenItem *itemNext = [[FifteenItem alloc] init];
+    
+    itemNext.isFifteenOpened = @YES;
+    
+    
+    
+    
+    if(readItemNext.fifteenDeath.integerValue < 0){
+        
+        itemNext.fifteenDeath = [NSNumber numberWithInt:-1];
+        itemNext.fifteenMoves = [NSNumber numberWithInt:-1];
+        itemNext.fifteenMinutesPassed = [NSNumber numberWithInt:-1];
+        itemNext.fifteenSecondsPassed = [NSNumber numberWithInt:-1];
+        
+    } else {
+        
+        itemNext.fifteenDeath = readItemNext.fifteenDeath;
+        itemNext.fifteenMoves = readItemNext.fifteenMoves;
+        itemNext.fifteenMinutesPassed = readItemNext.fifteenMinutesPassed;
+        itemNext.fifteenSecondsPassed = readItemNext.fifteenSecondsPassed;
+        
+    }
+    
+    
+    
+    itemNext.fifteenPositions = readItemNext.fifteenPositions;
+    itemNext.fifteenPositionsShuffled = readItemNext.fifteenPositionsShuffled;
+    itemNext.fifteenEtaDeath = readItemNext.fifteenEtaDeath;
+    itemNext.fifteenEtaMoves = readItemNext.fifteenEtaMoves;
+    itemNext.fifteenEtaMinutesPassed = readItemNext.fifteenEtaMinutesPassed;
+    itemNext.fifteenEtaSecondsPassed = readItemNext.fifteenEtaSecondsPassed;
+    
+    itemNext.fifteenPositions = readItemNext.fifteenPositions;
+    itemNext.fifteenPositionsShuffled = readItemNext.fifteenPositionsShuffled;
+    itemNext.currentFifteenLevel = readItemNext.currentFifteenLevel;
+    
+    
+    NSData *itemDataNext = [NSKeyedArchiver archivedDataWithRootObject:itemNext];
+    [[NSUserDefaults standardUserDefaults] setObject:itemDataNext forKey:[NSString stringWithFormat:@"%d", activePuzzleNumber+1]];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
+    
+    
+    self.gameplayParrentDelegate.levelSeconds = 0;
+    self.gameplayParrentDelegate.levelMinutes = 0;
+    
+    self.gameplayParrentDelegate.firstTutorialWin = YES;
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+}
+
 
 -(void)finishAnimation{
     //NSLog(@"Finish animation:%@", [self gameplayParrentDelegate]);
@@ -957,22 +1211,7 @@
     
     if(ifWin){
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        BOOL showBossLevel = YES;
+         BOOL showBossLevel = YES;
         
         
         if(showBossLevel){
@@ -1053,244 +1292,6 @@
             }
             
         }
-        
-        
-        
-        
-        FifteenItem *item = [[FifteenItem alloc] init];
-        
-        item.isFifteenOpened = @YES;
-        item.fifteenDeath = [NSNumber numberWithInt:resultsBar.fifteenDeath];
-        item.fifteenMoves = [NSNumber numberWithInt:resultsBar.fifteenMoves];
-        item.fifteenMinutesPassed = [NSNumber numberWithInt:self.gameplayParrentDelegate.levelMinutes];
-        item.fifteenSecondsPassed = [NSNumber numberWithInt:self.gameplayParrentDelegate.levelSeconds];
-        
-        item.fifteenEtaDeath = readItem.fifteenEtaDeath;
-        item.fifteenEtaMoves = readItem.fifteenEtaMoves;
-        item.fifteenEtaMinutesPassed = readItem.fifteenEtaMinutesPassed;
-        item.fifteenEtaSecondsPassed = readItem.fifteenEtaSecondsPassed;
-        
-        item.fifteenPositions = readItem.fifteenPositions;
-        
-        item.isBossDefeated = readItem.isBossDefeated;
-        
-//        item.fifteenPositionsShuffled = readItem.fifteenPositionsShuffled;
-        
-        
-        
-        switch (activePuzzleNumber) {
-            case 1:
-                
-                    [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:1.3]];
-                    [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:2.1]];
-                    [item.fifteenPositionsShuffled replaceObjectAtIndex:17 withObject: [NSNumber numberWithFloat:3.5]];
-                    [item.fifteenPositionsShuffled replaceObjectAtIndex:13 withObject: [NSNumber numberWithFloat:4.2]];
-                    [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:5.6]];
-                
-                break;
-                
-                
-            case 2:
-                
-                
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:1.3]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:2.1]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:3.6]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:17 withObject: [NSNumber numberWithFloat:4.5]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:5.4]];
-                
-                break;
-                
-                
-                
-            case 3:
-                
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:18 withObject: [NSNumber numberWithFloat:1.3]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:2.6]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:3.4]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:4.2]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:5.2]];
-                
-                break;
-                
-                
-                
-            case 4:
-                
-                
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:1.1]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:2.6]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:13 withObject: [NSNumber numberWithFloat:3.2]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:4.3]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:17 withObject: [NSNumber numberWithFloat:5.5]];
-                
-                break;
-                
-                
-                
-            case 5:
-                
-                
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:1.2]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:2.5]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:6 withObject: [NSNumber numberWithFloat:3.4]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:4.3]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:17 withObject: [NSNumber numberWithFloat:5.6]];
-                
-                break;
-                
-                
-            case 6:
-                
-                
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:1.6]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:17 withObject: [NSNumber numberWithFloat:2.3]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:3.1]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:13 withObject: [NSNumber numberWithFloat:4.5]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:5.4]];
-                
-                break;
-                
-                
-            case 7:
-                
-                
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:1.5]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:2.4]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:3.1]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:4.6]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:5.2]];
-                
-                break;
-                
-                
-            case 8:
-                
-               
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:1.2]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:2.4]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:18 withObject: [NSNumber numberWithFloat:3.1]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:4.5]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:13 withObject: [NSNumber numberWithFloat:5.6]];
-                
-                break;
-                
-                
-            case 9:
-                
-                
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:1.1]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:6 withObject: [NSNumber numberWithFloat:2.6]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:3.3]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:4.5]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:8 withObject: [NSNumber numberWithFloat:5.2]];
-                
-                break;
-                
-                
-            case 10:
-                
-                  
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:6 withObject: [NSNumber numberWithFloat:1.2]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:2.3]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:3.5]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:4.4]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:5.1]];
-                
-                break;
-                
-            case 11:
-                
-                
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:16 withObject: [NSNumber numberWithFloat:1.3]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:11 withObject: [NSNumber numberWithFloat:2.2]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:6 withObject: [NSNumber numberWithFloat:3.4]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:7 withObject: [NSNumber numberWithFloat:4.1]];
-                [item.fifteenPositionsShuffled replaceObjectAtIndex:12 withObject: [NSNumber numberWithFloat:5.6]];
-                
-                break;
-                
-                
-                
-                
-                
-                
-                
-            default:
-                break;
-        }
-        
-        
-        
-        
-        
-        item.currentFifteenLevel = @1;
-        
-        NSData *itemData = [NSKeyedArchiver archivedDataWithRootObject:item];
-        [[NSUserDefaults standardUserDefaults] setObject:itemData forKey:[NSString stringWithFormat:@"%d", activePuzzleNumber]];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        
-        
-        
-        
-        
-        
-//        NSLog(@"readItemTest.fifteenMoves = %@", readItemTest.fifteenMoves);
-        
-        NSData *readItemDataNext = [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%d", activePuzzleNumber+1]];
-        FifteenItem *readItemNext = [NSKeyedUnarchiver unarchiveObjectWithData:readItemDataNext];
-        
-        
-        FifteenItem *itemNext = [[FifteenItem alloc] init];
-        
-        itemNext.isFifteenOpened = @YES;
-        
-        
-        
-        
-        if(readItemNext.fifteenDeath.integerValue < 0){
-            
-            itemNext.fifteenDeath = [NSNumber numberWithInt:-1];
-            itemNext.fifteenMoves = [NSNumber numberWithInt:-1];
-            itemNext.fifteenMinutesPassed = [NSNumber numberWithInt:-1];
-            itemNext.fifteenSecondsPassed = [NSNumber numberWithInt:-1];
-        
-        } else {
-            
-            itemNext.fifteenDeath = readItemNext.fifteenDeath;
-            itemNext.fifteenMoves = readItemNext.fifteenMoves;
-            itemNext.fifteenMinutesPassed = readItemNext.fifteenMinutesPassed;
-            itemNext.fifteenSecondsPassed = readItemNext.fifteenSecondsPassed;
-
-        }
-        
-        
-        
-        itemNext.fifteenPositions = readItemNext.fifteenPositions;
-        itemNext.fifteenPositionsShuffled = readItemNext.fifteenPositionsShuffled;
-        itemNext.fifteenEtaDeath = readItemNext.fifteenEtaDeath;
-        itemNext.fifteenEtaMoves = readItemNext.fifteenEtaMoves;
-        itemNext.fifteenEtaMinutesPassed = readItemNext.fifteenEtaMinutesPassed;
-        itemNext.fifteenEtaSecondsPassed = readItemNext.fifteenEtaSecondsPassed;
-        
-        itemNext.fifteenPositions = readItemNext.fifteenPositions;
-        itemNext.fifteenPositionsShuffled = readItemNext.fifteenPositionsShuffled;
-        itemNext.currentFifteenLevel = readItemNext.currentFifteenLevel;
-        
-        
-        NSData *itemDataNext = [NSKeyedArchiver archivedDataWithRootObject:itemNext];
-        [[NSUserDefaults standardUserDefaults] setObject:itemDataNext forKey:[NSString stringWithFormat:@"%d", activePuzzleNumber+1]];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        
-        
-        
-        
-        self.gameplayParrentDelegate.levelSeconds = 0;
-        self.gameplayParrentDelegate.levelMinutes = 0;
-        
-        self.gameplayParrentDelegate.firstTutorialWin = YES;
-        
-        
         
         
         

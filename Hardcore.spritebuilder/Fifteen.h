@@ -28,6 +28,7 @@
 
 -(void) updateFifteenData;
 -(void) updateSomeData;
+-(void) showWinAnimation;
 
 - (int)getActiveLevelNumber;
 - (int)getActivePuzzleNumber;

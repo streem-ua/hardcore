@@ -153,6 +153,10 @@
     CCNode *_speedContainer4;
    
     
+    
+    CCNode *_finishLevel;
+    BOOL levelFinished;
+    
     }
 
 /*
@@ -220,6 +224,8 @@
          _speedContainer2Catched = NO;
          _speedContainer3Catched = NO;
          _speedContainer4Catched = NO;
+        
+        levelFinished = NO;
     }
     return self;
 }
@@ -703,6 +709,19 @@
     
     CGRect rustyPortalCatch = CGRectMake(rustyX-10, rustyY-10, 20, 20);
     CGRect rustyPortalCatchOut = CGRectMake(rustyX-16, rustyY-16, 32, 32);
+    
+    
+    CGRect finishLevelRect = CGRectMake(_finishLevel.position.x-_finishLevel.boundingBox.size.width/2, _finishLevel.position.y-_finishLevel.boundingBox.size.height/2, _finishLevel.boundingBox.size.width, _finishLevel.boundingBox.size.height);
+    
+    
+    if(CGRectContainsPoint(finishLevelRect, ccp(rustyX, rustyY)) && !levelFinished){
+        
+        levelFinished = YES;
+        [self.gameplayParrentDelegate showWinAnimation];
+        NSLog(@"LEVEL FINISHED");
+        
+        
+    }
     
     
     

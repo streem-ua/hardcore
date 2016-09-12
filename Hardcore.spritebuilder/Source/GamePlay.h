@@ -31,7 +31,7 @@
 -(void) setRustyRandomSpeed;
 - (void) startFromPuzzle:(CCNode *)sender;
 //(CCButton *)sender
-
+-(void) showWinAnimation;
 
 @property CCNode *rusty;
 //
@@ -71,6 +71,7 @@
 
 //- (void)showFifteenFromGame:(NSTimer*)theTimer;
 - (void)showFifteenFromGameNew:(int)moveDirection;
+-(void) showFifteen;
 
 @property BOOL thisIsTutorial;
 @property BOOL firstTutorialWin;
