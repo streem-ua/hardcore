@@ -182,7 +182,9 @@
 			<key>bodyShape</key>
 			<integer>1</integer>
 			<key>collisionCategories</key>
-			<array/>
+			<array>
+				<string>categoryTree</string>
+			</array>
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>

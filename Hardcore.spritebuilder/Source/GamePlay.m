@@ -8,9 +8,14 @@
 #import "RightMenu.h"
 #import "FifteenItem.h"
 #import "BossStory.h"
+//#import "CCNode_Private.h"
+#import "WaterKillClass.h"
+
 
 
 @implementation GamePlay {
+    
+    
     
     CCNode* level;
     // CCNode *rusty;
@@ -102,11 +107,16 @@
     
     
     CCNode *currentPlatform;
+    CCNode *bubbles;
+    
+    WaterKillClass *killingWaves;
     
     
     BossStory *bossStory;
     
     BOOL freezeEnabled;
+    
+    
     
 
 }
@@ -123,6 +133,7 @@
         self.rustyDeadFirstTime = NO;
         self.rustyDeadFirstTimeGlobal = NO;
         self.fifteenNewLevel = NO;
+        self.rustyKilledByWater = NO;
         freezeEnabled = NO;
         // отлично, добавляем обзервер
         
@@ -180,6 +191,7 @@
     rustySpeed = 88;
     rustyJump = 36;
     self.defaultRustySpeed = 88;
+    self.defaultRustyJump = 36;
     
     
     //gameImageButtons = [CCBReader load:@"game_buttons"];
@@ -277,12 +289,14 @@
     
     _levelsSelect.visible = NO;
     
+    
+    
     self.currentActiveLevel = sender.name.intValue;
     self.activePuzzleNumber = 1;
     
     [self fifteenChoosed];
     
-    [self startGameWithLevel:sender.name.intValue withString:@"native"];
+//    [self startGameWithLevel:sender.name.intValue withString:@"native"];
     
 }
 
@@ -473,7 +487,18 @@
     
     
     self.rusty.physicsBody.collisionType = @"rusty";
+    
+    
+    
+    
+    //
+    
+    
     [_physicsNode addChild:self.rusty];
+    
+    
+    
+   
     
     
     NSLog(@"collisionType = %@", self.rusty.physicsBody.collisionType);
@@ -499,6 +524,8 @@
 
 
 - (void) startGameWithLevel:(int)levelId withString:(NSString *)typeStr{
+    
+    
     
     
     if([typeStr  isEqual: @"fifteen"]){
@@ -853,6 +880,7 @@
                     
                     levelName = @"newLevels/level37/level37";
                     
+                    
                 } else if(self.activePuzzleNumber == 5){
                     
                     levelName = @"newLevels/level47/level47";
@@ -936,17 +964,63 @@
         
         levels = (Levels*)[CCBReader load:levelName]; //goto load: yes )
         
+        
         if (self.activePuzzleNumber == 11 && levelId==1){
+        
             levels.leftMenuFirstClosed = NO;
+        
         } else {
+        
             levels.leftMenuFirstClosed = YES;
+        
         }
 
         
         levels.gameplayParrentDelegate = self;
         levels.name = @"levels";
-        [_levelNode addChild:levels];
+        levels.levelFlipped = NO;
         
+        if(levelId == 37){
+            
+            
+            killingWaves = (WaterKillClass*)[CCBReader load:@"newLevels/level37/move_wave/killingWaves"];
+            killingWaves.gameplayParrentDelegate = self;
+            killingWaves.zOrder = 50;
+            [_physicsNode addChild:killingWaves];
+            
+            
+            
+            bubbles = [CCBReader load:@"newLevels/level37/move_wave/deadRusty"];
+            bubbles.position = ccp(10, 10);
+            bubbles.visible = NO;
+            [self.rusty addChild:bubbles];
+            
+       
+        } else if(levelId == 2){
+        
+            
+            
+           
+//            self.la
+            
+            
+            
+            
+            
+//            NSTimer *flipRustyLevel = [NSTimer scheduledTimerWithTimeInterval:7 target:self selector:@selector(flipLevel) userInfo:nil repeats:NO];
+            
+            _levelNode.scaleX = -1;
+            _levelNode.position = ccp(512, 0);
+            levels.levelFlipped = YES;
+            NSLog(@"FLIPPED");
+          
+            
+            
+            
+        }
+        
+        
+        [_levelNode addChild:levels];
         
        
         
@@ -1014,14 +1088,30 @@
     
 }
 
+
+-(void)flipLevel{
+  
+    _levelNode.scaleX = -1;
+    _levelNode.position = ccp(512, 0);
+    levels.levelFlipped = YES;
+    NSLog(@"FLIPPED");
+
+}
+
+
 - (int)randomValueBetween:(int)min and:(int)max {
     return (int)(min + arc4random_uniform(max - min + 1));
 }
 
--(void) setRustyRandomSpeed{
-    int tempRustySpeed = [self randomValueBetween:61 and:251];
+-(void) setRustyRandomSpeed:(int)aditionalSpeed{
+    int tempRustySpeed = [self randomValueBetween:140 and:150+aditionalSpeed];
     rustySpeed = tempRustySpeed;
     NSLog(@"tempRustySpeed = %i", tempRustySpeed);
+}
+
+-(void) setRustyRandomJump:(int)aditionalJump{
+    rustyJump = _defaultRustyJump-aditionalJump;
+    NSLog(@"rustyJump = %i", rustyJump);
 }
 
 -(void) clearLevels{
@@ -1170,13 +1260,24 @@
 -(void) spawnRusty:(CGPoint)startPoint{
     
     
-    if(!self.newLevelLoading){
+    
+    
+    if(!self.newLevelLoading && !self.rustyKilledByWater){
         NSLog(@"=============== SPAWN RUSTY ================== with x=%f AND y=%f", startPoint.x, startPoint.y);
         
+        
+        bubbles.visible = NO;
+//        bubbleHolder.opacity = 0;
+//        bubbleHolder.position = ccp(10, -bubbles.boundingBox.size.height);
+//        
         //[_physicsNode removeChildByName:@"rusty" cleanup:YES];
         
         
         //self.rusty.name = @"rusty";
+        
+        self.rusty.physicsBody.sensor = NO;
+        _physicsNode.gravity = ccp(0, -500);
+        
         
         respawnAnimation.visible = YES;
         
@@ -1472,6 +1573,9 @@
 //    NSLog(@"%f", self.rusty.position.y);
     
     
+
+    
+    
     if(self.rusty.physicsBody.velocity.y <= -20){
 //        self.rusty.animationRunning = NO;
     }
@@ -1624,10 +1728,40 @@
     
 }
 
-- (void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair*)pair
+
+- (BOOL)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair*)pair
+                              water:(WaterKillClass*)nodeA
+                           wildcard:(CCNode*)nodeB
+{
+    
+
+    
+    
+    if([nodeB.physicsBody.collisionType  isEqual: @"fall1"]){
+    
+        nodeB.physicsBody.sensor = YES;
+        
+        return NO;
+
+    } else {
+        return YES;
+
+    }
+    
+    
+    return NO;
+    
+    
+}
+
+
+
+- (BOOL)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair*)pair
                               rusty:(Rusty*)nodeA
                            wildcard:(CCNode*)nodeB
 {
+    
+    
     
     
     
@@ -1839,7 +1973,57 @@
     
     
     
+    
+    if([nodeB.physicsBody.collisionType  isEqual: @"water"] && !self.newLevelLoading && !freezeEnabled){
+    
+        
+        self.rusty.physicsBody.sensor = TRUE;
+//        _physicsNode.gravity = ccp(0, -300);
+        self.rustyIsDead = YES;
+        
+        self.rustyKilledByWater = YES;
+
+        [killingWaves moveWaterToInitPosition];
+        
+       
+        
+        bubbles.visible = YES;
+        
+        [bubbles.animationManager jumpToSequenceNamed:@"timeline" time:0];
+        [bubbles.animationManager runAnimationsForSequenceNamed:@"timeline"];
+
+//        CCActionSpawn *myBuublesSpawn = [CCActionSpawn actions:[CCActionFadeIn actionWithDuration:2], [CCActionMoveTo actionWithDuration:2 position:ccp(10,10)], nil];
+//        CCActionSequence *showSeq = [CCActionSequence actions:[CCActionDelay actionWithDuration:2], myBuublesSpawn, nil];
+//        
+//        [bubbleHolder runAction:showSeq];
+        
+        
+        return NO;
+        
+        
+   
+    
+    }
+    
+    
+    return YES;
+    
 }
+
+-(void) spawnRustyFromWater{
+    
+    if(self.rustyIsDead){
+        self.rustyKilledByWater = NO;
+        self.rustyIsDead = NO;
+        self.newLevelLoading = NO;
+        
+        [self spawnRusty:levels.getRustyPosition];
+        
+        NSLog(@"spawnRustyFromWater");
+    }
+    
+}
+
 
 
 -(void)showTime:(NSTimer *)sender

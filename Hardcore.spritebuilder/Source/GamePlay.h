@@ -28,10 +28,10 @@
 
 - (int) getActivePuzzleNumber;
 - (int) getTestActivePuzzleNumber;
--(void) setRustyRandomSpeed;
 - (void) startFromPuzzle:(CCNode *)sender;
 //(CCButton *)sender
 -(void) showWinAnimation;
+-(void) spawnRustyFromWater;
 
 @property CCNode *rusty;
 //
@@ -39,12 +39,12 @@
 @property NSTimer *portalTimer;
 
 
-@property int defaultRustySpeed;
+
 
 @property BOOL portalTimerCreated;
 @property BOOL rustyMoving;
 @property BOOL rustyIsDead;
-
+@property BOOL rustyKilledByWater;
 
 @property int activePuzzleNumber;
 @property int currentActiveLevel;
@@ -100,6 +100,14 @@
 
 @property NSUserDefaults *myFifteenSaved;
 
+
+
+-(void) setRustyRandomSpeed:(int)aditionalSpeed;
+-(void) setRustyRandomJump:(int)aditionalJump;
+
+
+@property int defaultRustySpeed;
+@property int defaultRustyJump;
 
 
 @end

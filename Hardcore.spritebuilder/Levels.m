@@ -139,6 +139,7 @@
     BOOL _speedContainer2Catched;
     BOOL _speedContainer3Catched;
     BOOL _speedContainer4Catched;
+    BOOL _speedContainer5Catched;
     
     CCNode *_movingPlatform;
     
@@ -151,8 +152,17 @@
     CCNode *_speedContainer2;
     CCNode *_speedContainer3;
     CCNode *_speedContainer4;
-   
+    CCNode *_speedContainer5;
     
+    CCNode *_ghostContainer;
+    CCNode *_ghostContainer1;
+    CCNode *_ghostContainer2;
+    
+    CCNode *_ghost;
+    CCNode *_ghost1;
+    CCNode *_ghost2;
+    
+    CCNode *_speedIndicator;
     
     CCNode *_finishLevel;
     BOOL levelFinished;
@@ -415,13 +425,9 @@
     
     _rustyPosition.visible = NO;
     
-    
-    
-    
-
-
-    
-    
+    _ghost.visible = NO;
+    _ghost1.visible = NO;
+    _ghost2.visible = NO;
     
 }
 
@@ -443,7 +449,18 @@
     
     if(!self.fifteenEnabled && !self.gameplayParrentDelegate.rustyIsDead && self.gameplayParrentDelegate.rusty.visible && !self.gameplayParrentDelegate.newLevelLoading){
         
-        CCActionMoveTo *moveTo = [CCActionMoveTo actionWithDuration:0.2 position:ccp(rustyX, rustyY)];
+        CCActionMoveTo *moveTo;
+        
+        
+        
+        if(self.levelFlipped){
+            moveTo = [CCActionMoveTo actionWithDuration:0.2 position:ccp(512-rustyX, rustyY)];
+        } else {
+            moveTo = [CCActionMoveTo actionWithDuration:0.2 position:ccp(rustyX, rustyY)];
+        }
+        
+        
+        
         //        CCActionMoveTo *moveBack = [CCActionMoveTo actionWithDuration:0.5 position:ccp(_rustyMask.position.x - 30, _rustyMask.position.y - 20)];
         
         id ease1 = [CCActionEaseInOut actionWithAction:moveTo rate:2];
@@ -726,37 +743,84 @@
     
     
     if(!_speedContainer1Catched && CGRectContainsPoint(CGRectMake(_speedContainer1.position.x, _speedContainer1.position.y, _speedContainer1.boundingBox.size.width, _speedContainer1.boundingBox.size.height), ccp(rustyX, rustyY))){
+        
+        _speedIndicator.position = ccp(_speedContainer2.position.x-34, _speedContainer2.position.y+21);
+        _speedIndicator.scaleX = -1;
+        _speedIndicator.visible = YES;
+        
         _speedContainer1Catched = YES;
         _speedContainer2Catched = NO;
         _speedContainer3Catched = NO;
         _speedContainer4Catched = NO;
-        [self.gameplayParrentDelegate setRustyRandomSpeed];
+        _speedContainer5Catched = NO;
+        [self.gameplayParrentDelegate setRustyRandomSpeed:1];
+        [self.gameplayParrentDelegate setRustyRandomJump:2];
     }
     
     if(!_speedContainer2Catched && CGRectContainsPoint(CGRectMake(_speedContainer2.position.x, _speedContainer2.position.y, _speedContainer2.boundingBox.size.width, _speedContainer2.boundingBox.size.height), ccp(rustyX, rustyY))){
+        
+        _speedIndicator.position = ccp(_speedContainer3.position.x+30, _speedContainer3.position.y+10);
+        _speedIndicator.scaleX = 1;
+        _speedIndicator.visible = YES;
+        
         _speedContainer2Catched = YES;
         _speedContainer1Catched = NO;
         _speedContainer3Catched = NO;
         _speedContainer4Catched = NO;
-        [self.gameplayParrentDelegate setRustyRandomSpeed];
+        _speedContainer5Catched = NO;
+        [self.gameplayParrentDelegate setRustyRandomSpeed:40];
+        [self.gameplayParrentDelegate setRustyRandomJump:4];
     }
     
     if(!_speedContainer3Catched && CGRectContainsPoint(CGRectMake(_speedContainer3.position.x, _speedContainer3.position.y, _speedContainer3.boundingBox.size.width, _speedContainer3.boundingBox.size.height), ccp(rustyX, rustyY))){
+        
+        _speedIndicator.position = ccp(_speedContainer4.position.x-25, _speedContainer4.position.y+15);
+        _speedIndicator.scaleX = -1;
+        _speedIndicator.visible = YES;
+        
         _speedContainer3Catched = YES;
         _speedContainer2Catched = NO;
         _speedContainer1Catched = NO;
         _speedContainer4Catched = NO;
-        [self.gameplayParrentDelegate setRustyRandomSpeed];
+        _speedContainer5Catched = NO;
+        [self.gameplayParrentDelegate setRustyRandomSpeed:90];
+        [self.gameplayParrentDelegate setRustyRandomJump:5];
     }
     
     if(!_speedContainer4Catched && CGRectContainsPoint(CGRectMake(_speedContainer4.position.x, _speedContainer4.position.y, _speedContainer4.boundingBox.size.width, _speedContainer4.boundingBox.size.height), ccp(rustyX, rustyY))){
+        
+        _speedIndicator.visible = NO;
+        
         _speedContainer4Catched = YES;
         _speedContainer2Catched = NO;
         _speedContainer3Catched = NO;
         _speedContainer1Catched = NO;
-        [self.gameplayParrentDelegate setRustyRandomSpeed];
+        _speedContainer5Catched = NO;
+        [self.gameplayParrentDelegate setRustyRandomSpeed:130];
+        [self.gameplayParrentDelegate setRustyRandomJump:6];
     }
     
+    if(!_speedContainer5Catched && CGRectContainsPoint(CGRectMake(_speedContainer5.position.x, _speedContainer5.position.y, _speedContainer5.boundingBox.size.width, _speedContainer5.boundingBox.size.height), ccp(rustyX, rustyY))){
+        _speedContainer4Catched = NO;
+        _speedContainer2Catched = NO;
+        _speedContainer3Catched = NO;
+        _speedContainer1Catched = NO;
+        _speedContainer5Catched = YES;
+    }
+    if(CGRectContainsPoint(CGRectMake(_ghostContainer.position.x, _ghostContainer.position.y, _ghostContainer.boundingBox.size.width, _ghostContainer.boundingBox.size.height), ccp(rustyX, rustyY))){
+        _ghost.visible = YES;
+        _ghost.physicsBody.sensor = NO;
+        
+    }
+    
+    if(CGRectContainsPoint(CGRectMake(_ghostContainer1.position.x, _ghostContainer1.position.y, _ghostContainer1.boundingBox.size.width, _ghostContainer1.boundingBox.size.height), ccp(rustyX, rustyY))){
+        _ghost.physicsBody.sensor = YES;
+        _ghost.visible = NO;
+    }
+    if(CGRectContainsPoint(CGRectMake(_ghostContainer2.position.x, _ghostContainer2.position.y, _ghostContainer2.boundingBox.size.width, _ghostContainer2.boundingBox.size.height), ccp(rustyX, rustyY))){
+        _ghost1.visible = YES;
+        
+    }
     
     /*
      
@@ -1263,7 +1327,7 @@
             id done1 = [CCActionCallBlock actionWithBlock:^{
                 
                 copyNode.opacity = 1;
-                
+                copyNode.physicsBody.sensor = NO;
                 copyNode.position = initialPos;
                 copyNode.rotation = 0;
                 copyNode.physicsBody.type = CCPhysicsBodyTypeKinematic;
@@ -1287,7 +1351,7 @@
             id done1 = [CCActionCallBlock actionWithBlock:^{
                 
                 copyNode.opacity = 1;
-                
+                copyNode.physicsBody.sensor = NO;
                 copyNode.position = initialPos;
                 copyNode.rotation = 0;
                 copyNode.physicsBody.type = CCPhysicsBodyTypeKinematic;
@@ -1523,7 +1587,13 @@
     _speedContainer2Catched = NO;
     _speedContainer3Catched = NO;
     _speedContainer4Catched = NO;
-}
+    _speedContainer5Catched = NO;
+    _speedIndicator.position = ccp(_speedContainer1.position.x+78, _speedContainer1.position.y+26);
+    _speedIndicator.scaleX = 1;
+    _speedIndicator.visible = YES;
+    _ghost.visible = NO;
+    _ghost1.visible = NO;
+    _ghost2.visible = NO;}
 
 -(void) setFreeze:(BOOL) freeze{
     

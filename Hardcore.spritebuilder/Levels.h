@@ -20,6 +20,7 @@
 
 @property CCSprite *myBg;
 @property BOOL fifteenEnabled;
+@property BOOL levelFlipped;
 
 @property GamePlay *gameplayParrentDelegate;
 

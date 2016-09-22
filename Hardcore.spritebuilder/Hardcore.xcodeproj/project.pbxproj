@@ -24,6 +24,7 @@
 		2733E2411BE9077800F4FDDB /* FallPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 2733E2401BE9077800F4FDDB /* FallPlatform.m */; };
 		273695A41C7CC08A00DE2364 /* SpaceVikingFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 273695A31C7CC08A00DE2364 /* SpaceVikingFont.fnt */; };
 		273695A81C7CC69300DE2364 /* SpaceVikingFont.png in Resources */ = {isa = PBXBuildFile; fileRef = 273695A71C7CC69300DE2364 /* SpaceVikingFont.png */; };
+		274908AE1D8C35FE008ADF88 /* WaterKillClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 274908AD1D8C35FE008ADF88 /* WaterKillClass.m */; };
 		274C6CD41C6E344600A32312 /* fifteenHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 274C6CCF1C6E344600A32312 /* fifteenHighlight.png */; };
 		274C6CD51C6E344600A32312 /* fifteenHint.png in Resources */ = {isa = PBXBuildFile; fileRef = 274C6CD01C6E344600A32312 /* fifteenHint.png */; };
 		274C6CD61C6E344600A32312 /* fifteenLineNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 274C6CD11C6E344600A32312 /* fifteenLineNew.png */; };
@@ -284,6 +285,8 @@
 		2733E2401BE9077800F4FDDB /* FallPlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FallPlatform.m; sourceTree = "<group>"; };
 		273695A31C7CC08A00DE2364 /* SpaceVikingFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpaceVikingFont.fnt; sourceTree = "<group>"; };
 		273695A71C7CC69300DE2364 /* SpaceVikingFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpaceVikingFont.png; sourceTree = "<group>"; };
+		274908AC1D8C35FE008ADF88 /* WaterKillClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterKillClass.h; sourceTree = "<group>"; };
+		274908AD1D8C35FE008ADF88 /* WaterKillClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterKillClass.m; sourceTree = "<group>"; };
 		274C6CCF1C6E344600A32312 /* fifteenHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifteenHighlight.png; sourceTree = "<group>"; };
 		274C6CD01C6E344600A32312 /* fifteenHint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifteenHint.png; sourceTree = "<group>"; };
 		274C6CD11C6E344600A32312 /* fifteenLineNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifteenLineNew.png; sourceTree = "<group>"; };
@@ -838,6 +841,8 @@
 				D352B48019EC608A00829775 /* MetalShaders */,
 				27C29DD01D660704009F0739 /* MovingPlatform.h */,
 				27C29DD11D660704009F0739 /* MovingPlatform.m */,
+				274908AC1D8C35FE008ADF88 /* WaterKillClass.h */,
+				274908AD1D8C35FE008ADF88 /* WaterKillClass.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -1362,6 +1367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274908AE1D8C35FE008ADF88 /* WaterKillClass.m in Sources */,
 				27AE592E1AC9B3BF00E6C558 /* RightMenu.m in Sources */,
 				27CAD3CB1B0B79C200C819FE /* Fifteen.m in Sources */,
 				272E120B1C7637CC0018BB83 /* CCColor+HexString.m in Sources */,

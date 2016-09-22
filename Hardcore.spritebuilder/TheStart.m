@@ -651,7 +651,13 @@
     
     
     
+    
+    
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GamePlay"]];
+    
+    
+    
+    
 }
 
 
