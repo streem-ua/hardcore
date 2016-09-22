@@ -26,9 +26,11 @@
 - (void) startGameWithLevel:(int)levelId withString:(NSString *)typeStr;
 - (void) reloadFifteen:(int)activePuzzleNumber;
 
+-(void) spawnRustyFromWater;
 - (int) getActivePuzzleNumber;
 - (int) getTestActivePuzzleNumber;
--(void) setRustyRandomSpeed;
+-(void) setRustyRandomSpeed:(int)aditionalSpeed;
+-(void) setRustyRandomJump:(int)aditionalJump;
 - (void) startFromPuzzle:(CCNode *)sender;
 //(CCButton *)sender
 
@@ -38,8 +40,10 @@
 
 @property NSTimer *portalTimer;
 
+@property BOOL rustyKilledByWater;
 
 @property int defaultRustySpeed;
+@property int defaultRustyJump;
 
 @property BOOL portalTimerCreated;
 @property BOOL rustyMoving;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048DCD731D903DB30002EFF3 /* WaterKillClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DCD721D903DB30002EFF3 /* WaterKillClass.m */; };
 		270A3DD61C6514D60045C036 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 270A3DD01C6514D60045C036 /* circle.png */; };
 		270A3DD71C6514D60045C036 /* jump1.png in Resources */ = {isa = PBXBuildFile; fileRef = 270A3DD11C6514D60045C036 /* jump1.png */; };
 		270A3DD81C6514D60045C036 /* jump2.png in Resources */ = {isa = PBXBuildFile; fileRef = 270A3DD21C6514D60045C036 /* jump2.png */; };
@@ -262,6 +263,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		048DCD6F1D903DAA0002EFF3 /* WaterKillClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterKillClass.h; sourceTree = "<group>"; };
+		048DCD721D903DB30002EFF3 /* WaterKillClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterKillClass.m; sourceTree = "<group>"; };
 		270A3DD01C6514D60045C036 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		270A3DD11C6514D60045C036 /* jump1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jump1.png; sourceTree = "<group>"; };
 		270A3DD21C6514D60045C036 /* jump2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jump2.png; sourceTree = "<group>"; };
@@ -833,6 +836,8 @@
 				84A985DD1A8D160D00E873A9 /* CustomButton.m */,
 				27AE592C1AC9B3BF00E6C558 /* RightMenu.h */,
 				27AE592D1AC9B3BF00E6C558 /* RightMenu.m */,
+				048DCD6F1D903DAA0002EFF3 /* WaterKillClass.h */,
+				048DCD721D903DB30002EFF3 /* WaterKillClass.m */,
 				27667F961C0745BA004A6045 /* MainMenu.h */,
 				27667F971C0745BA004A6045 /* MainMenu.m */,
 				D352B48019EC608A00829775 /* MetalShaders */,
@@ -1362,6 +1367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048DCD731D903DB30002EFF3 /* WaterKillClass.m in Sources */,
 				27AE592E1AC9B3BF00E6C558 /* RightMenu.m in Sources */,
 				27CAD3CB1B0B79C200C819FE /* Fifteen.m in Sources */,
 				272E120B1C7637CC0018BB83 /* CCColor+HexString.m in Sources */,

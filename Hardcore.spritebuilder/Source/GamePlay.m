@@ -8,7 +8,7 @@
 #import "RightMenu.h"
 #import "FifteenItem.h"
 #import "BossStory.h"
-
+#import "WaterKillClass.h"
 
 @implementation GamePlay {
     
@@ -52,7 +52,7 @@
     //CCLabelTTF *_txtTime;
     
     
-    
+    WaterKillClass *killingWaves;
     
     CCLabelTTF *scorelabel;
     
@@ -180,6 +180,7 @@
     rustySpeed = 88;
     rustyJump = 36;
     self.defaultRustySpeed = 88;
+    self.defaultRustyJump = 36;
     
     
     //gameImageButtons = [CCBReader load:@"game_buttons"];
@@ -945,6 +946,39 @@
         
         levels.gameplayParrentDelegate = self;
         levels.name = @"levels";
+        
+
+        if(levelId == 37){
+            
+            
+            //            killingWaves = [CCNode node];
+            killingWaves = (WaterKillClass *)[CCBReader load:@"newLevels/level37/move_wave/killingWavesMove"];
+            killingWaves.gameplayParrentDelegate  =self;
+            //            killingWaves.position = ccp(512/2,0);
+            
+
+            [_physicsNode addChild:killingWaves];
+            
+        } else if(levelId == 2){
+            
+            
+            
+            
+            //            self.la
+            
+            
+            _levelNode.scaleX = -1;
+            _levelNode.position = ccp(512, 0);
+            
+//            levels.levelFlipped = YES;
+            
+            NSLog(@"FLIPPED");
+            
+            
+            
+        }
+        
+        
         [_levelNode addChild:levels];
         
         
@@ -1018,10 +1052,15 @@
     return (int)(min + arc4random_uniform(max - min + 1));
 }
 
--(void) setRustyRandomSpeed{
-    int tempRustySpeed = [self randomValueBetween:61 and:251];
+-(void) setRustyRandomSpeed:(int)aditionalSpeed{
+    int tempRustySpeed = [self randomValueBetween:140 and:150+aditionalSpeed];
     rustySpeed = tempRustySpeed;
     NSLog(@"tempRustySpeed = %i", tempRustySpeed);
+}
+
+-(void) setRustyRandomJump:(int)aditionalJump{
+    rustyJump = _defaultRustyJump-aditionalJump;
+    NSLog(@"rustyJump = %i", rustyJump);
 }
 
 -(void) clearLevels{
@@ -1169,8 +1208,7 @@
 
 -(void) spawnRusty:(CGPoint)startPoint{
     
-    
-    if(!self.newLevelLoading){
+    if(!self.newLevelLoading && !self.rustyKilledByWater){
         NSLog(@"=============== SPAWN RUSTY ================== with x=%f AND y=%f", startPoint.x, startPoint.y);
         
         //[_physicsNode removeChildByName:@"rusty" cleanup:YES];
@@ -1606,6 +1644,7 @@
     self.rustyIsDead = YES;
     
     rustySpeed = self.defaultRustySpeed;
+    rustyJump = self.defaultRustyJump;
     
     self.rusty.physicsBody.velocity = ccp(0,0);
     _forwardMarch = FALSE;
@@ -1624,7 +1663,7 @@
     
 }
 
-- (void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair*)pair
+- (BOOL)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair*)pair
                               rusty:(Rusty*)nodeA
                            wildcard:(CCNode*)nodeB
 {
@@ -1837,6 +1876,24 @@
     }
     
     
+    if([nodeB.physicsBody.collisionType  isEqual: @"water"] && !self.newLevelLoading && !freezeEnabled){
+        
+        
+        self.rusty.physicsBody.sensor = TRUE;
+        //        _physicsNode.gravity = ccp(0, -400);
+        self.rustyIsDead = YES;
+        
+        self.rustyKilledByWater = YES;
+        
+        return NO;
+        
+        
+        
+        
+    }
+    
+    
+    return YES;
     
     
 }
@@ -2251,6 +2308,19 @@
     globalDeathTriger = YES;
 }
 
+-(void) spawnRustyFromWater{
+    
+    if(self.rustyIsDead){
+        self.rustyKilledByWater = NO;
+        self.rustyIsDead = NO;
+        self.newLevelLoading = NO;
+        
+        [self spawnRusty:levels.getRustyPosition];
+        
+        NSLog(@"spawnRustyFromWater");
+    }
+    
+}
 
 
 -(void) showBossStory:(int) bossLevelId {
