@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>newLevels/level55/test/back2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2051, 1}, {2048, 1536}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {2048, 1536}}</string>
+			<key>sourceSize</key>
+			<string>{2048, 1536}</string>
+		</dict>
+		<key>newLevels/level55/test/background(55lvl).png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1539}, {2048, 1536}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {2048, 1536}}</string>
+			<key>sourceSize</key>
+			<string>{2048, 1536}</string>
+		</dict>
+		<key>newLevels/level55/test/bigmove(55lvl).png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3589, 1}, {163, 389}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {163, 389}}</string>
+			<key>sourceSize</key>
+			<string>{163, 389}</string>
+		</dict>
+		<key>newLevels/level55/test/fall1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3980, 1}, {358, 102}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {358, 102}}</string>
+			<key>sourceSize</key>
+			<string>{358, 102}</string>
+		</dict>
+		<key>newLevels/level55/test/fall2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3589, 270}, {202, 102}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {202, 102}}</string>
+			<key>sourceSize</key>
+			<string>{202, 102}</string>
+		</dict>
+		<key>newLevels/level55/test/fall3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3589, 166}, {202, 102}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {202, 102}}</string>
+			<key>sourceSize</key>
+			<string>{202, 102}</string>
+		</dict>
+		<key>newLevels/level55/test/fall4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3793, 166}, {202, 102}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {202, 102}}</string>
+			<key>sourceSize</key>
+			<string>{202, 102}</string>
+		</dict>
+		<key>newLevels/level55/test/islandswithspikes(55lvl).png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {2048, 1536}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {2048, 1536}}</string>
+			<key>sourceSize</key>
+			<string>{2048, 1536}</string>
+		</dict>
+		<key>newLevels/level55/test/move3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3897, 361}, {202, 102}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {202, 102}}</string>
+			<key>sourceSize</key>
+			<string>{202, 102}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{4096, 4096}</string>
+		<key>textureFileName</key>
+		<string>test.png</string>
+	</dict>
+</dict>
+</plist>
