@@ -19,6 +19,7 @@
     CCNode *tst;
     CCNode *KOGDANACHALAS;
     CCNode *tst_test;
+    CCNode *EBANYIVPOT2HUIPIZDA;
 
     // CCNode *rusty;
     CCNode *_levelNode;
