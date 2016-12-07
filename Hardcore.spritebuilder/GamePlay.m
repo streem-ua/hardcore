@@ -16,7 +16,7 @@
 
 @implementation GamePlay {
     
-    
+    CCNode *tst;
     
     // CCNode *rusty;
     CCNode *_levelNode;
