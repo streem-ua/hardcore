@@ -21,6 +21,11 @@
     CCNode *tst_test;
     CCNode *EBANYIVPOT2HUIPIZDA;
 
+    CCNode *EbaniyVROT1;
+    
+    
+    
+    
     // CCNode *rusty;
     CCNode *_levelNode;
     CCNode *_contentNode;
