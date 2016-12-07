@@ -95,7 +95,7 @@
     
     
     
-    LeftMenu *leftMenu;
+//    LeftMenu *leftMenu;
     
     CGPoint firstTouch;
     CGPoint lastTouch;
@@ -103,7 +103,7 @@
     CGPoint currentPrevTouch;
     BOOL touchMovingForward;
     
-    BOOL leftMenuEnabled;
+//    BOOL leftMenuEnabled;
     
     CustomButton* moveLeft;
     CustomButton* moveUp;
@@ -215,8 +215,8 @@
     
     self.rustyIsDead = YES;
     
-    leftMenu = [LeftMenu node];
-    leftMenu.gameplayParrentDelegate = self;
+//    leftMenu = [LeftMenu node];
+//    leftMenu.gameplayParrentDelegate = self;
     
 }
 
@@ -400,12 +400,12 @@
     
     
     
-    [_contentNode addChild:leftMenu];
-    leftMenu.position = ccp(-150, 0);
+//    [_contentNode addChild:leftMenu];
+//    leftMenu.position = ccp(-150, 0);
     
     
     
-    [leftMenu setupData:fifteen.fifteenOriginHolder withCurrentFifteen:fifteen.fifteenShuffleHolder];
+//    [leftMenu setupData:fifteen.fifteenOriginHolder withCurrentFifteen:fifteen.fifteenShuffleHolder];
     
     
     
@@ -1269,15 +1269,15 @@
     }
     
     
-    if(leftMenu.leftMenuEnabled){
-  
-        moveLeft.visible = NO;
-        levels.leftMenuFirstStart = YES;
-        
-    } else {
-        moveLeft.visible = YES;
-        
-    }
+//    if(leftMenu.leftMenuEnabled){
+//  
+//        moveLeft.visible = NO;
+//        levels.leftMenuFirstStart = YES;
+//        
+//    } else {
+//        moveLeft.visible = YES;
+//        
+//    }
     
     
     
@@ -1748,18 +1748,18 @@
 
 -(void) swipeRight {
     
-    CCActionMoveTo *moveMenu;
-    
-    if(leftMenuEnabled){
-        leftMenuEnabled = NO;
-        moveMenu = [CCActionMoveTo actionWithDuration:0.3 position:ccp(-150, 0)];
-
-    } else {
-        moveMenu = [CCActionMoveTo actionWithDuration:0.3 position:ccp(0, 0)];
-
-    }
-    
-    id moveHighlightWithEase = [CCActionEaseInOut actionWithAction:moveMenu rate:2];
+//    CCActionMoveTo *moveMenu;
+//    
+//    if(leftMenuEnabled){
+//        leftMenuEnabled = NO;
+//        moveMenu = [CCActionMoveTo actionWithDuration:0.3 position:ccp(-150, 0)];
+//
+//    } else {
+//        moveMenu = [CCActionMoveTo actionWithDuration:0.3 position:ccp(0, 0)];
+//
+//    }
+//    
+//    id moveHighlightWithEase = [CCActionEaseInOut actionWithAction:moveMenu rate:2];
     
 //    [leftMenu runAction:moveHighlightWithEase];
     
@@ -1830,7 +1830,7 @@
 -(void) moveFifteenHighlightTutorial:(CGPoint) myPoint{
     
 
-    [leftMenu moveTutorialHighlight:myPoint];
+//    [leftMenu moveTutorialHighlight:myPoint];
     
 }
 
