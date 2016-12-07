@@ -17,12 +17,9 @@
 @implementation GamePlay {
     
     CCNode *tst;
-<<<<<<< HEAD
     CCNode *KOGDANACHALAS;
-=======
     CCNode *tst_test;
-    
->>>>>>> 7fb4d1948b31e60e696e59d27eaca2485e6b8ddc
+
     // CCNode *rusty;
     CCNode *_levelNode;
     CCNode *_contentNode;
