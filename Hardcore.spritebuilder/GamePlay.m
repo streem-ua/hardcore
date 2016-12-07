@@ -20,6 +20,11 @@
     CCNode *KOGDANACHALAS;
     CCNode *tst_test;
 
+    CCNode *EbaniyVROT1;
+    
+    
+    
+    
     // CCNode *rusty;
     CCNode *_levelNode;
     CCNode *_contentNode;
