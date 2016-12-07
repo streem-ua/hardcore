@@ -17,7 +17,7 @@
 @implementation GamePlay {
     
     CCNode *tst;
-    
+    CCNode *KOGDANACHALAS;
     // CCNode *rusty;
     CCNode *_levelNode;
     CCNode *_contentNode;
