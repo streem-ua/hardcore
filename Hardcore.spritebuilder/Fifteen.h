@@ -14,7 +14,7 @@
 @interface Fifteen : CCNode
 
 @property GamePlay *gameplayParrentDelegate;
-@property CCSprite *_bg;
+
 
 
 //@property float fifteenPositions[kN+2][kM+2];
@@ -28,11 +28,16 @@
 
 -(void) updateFifteenData;
 -(void) updateSomeData;
+-(void) showWinAnimation;
 
 - (int)getActiveLevelNumber;
 - (int)getActivePuzzleNumber;
 
 -(void) removeLevelFromView;
+
+-(void) hideFifteen;
+-(void) showFifteen:(int)direction;
+-(void) showFifteenFinalStats;
 
 @property CCSprite *fifteenOriginHolder;
 @property CCSprite *fifteenShuffleHolder;

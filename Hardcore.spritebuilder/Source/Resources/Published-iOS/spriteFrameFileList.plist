@@ -8,6 +8,8 @@
 		<integer>1</integer>
 	</dict>
 	<key>spriteFrameFiles</key>
-	<array/>
+	<array>
+		<string>newLevels/level55/test.plist</string>
+	</array>
 </dict>
 </plist>

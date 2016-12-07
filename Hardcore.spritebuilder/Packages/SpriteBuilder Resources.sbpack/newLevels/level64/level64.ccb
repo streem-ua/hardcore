@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>1896</integer>
+	<integer>2028</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -51,7 +51,7 @@
 				<key>displayName</key>
 				<string>back2</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_background</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -96,8 +96,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>1.1000000238418579</real>
+							<real>1.1000000238418579</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -159,7 +159,7 @@
 				<key>displayName</key>
 				<string>back1</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_background</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -204,9 +204,9 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
+							<real>1.1000000238418579</real>
+							<real>1.1000000238418579</real>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -254,6 +254,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1581,7 +1583,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>57.811836242675781</real>
+							<real>59.550411224365234</real>
 							<real>259</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3693,7 +3695,7 @@
 						<key>value</key>
 						<array>
 							<real>281.38104248046875</real>
-							<real>145.18696594238281</real>
+							<real>142.34674072265625</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4798,7 +4800,7 @@
 						<key>value</key>
 						<array>
 							<real>11.25</real>
-							<real>365.29998779296875</real>
+							<real>360</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -5191,8 +5193,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>500.19317626953125</real>
-							<real>254.75227355957031</real>
+							<real>502.07955932617188</real>
+							<real>254.75682067871094</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -5614,8 +5616,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>500.19317626953125</real>
-							<real>254.75227355957031</real>
+							<real>502.07955932617188</real>
+							<real>254.75682067871094</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -6203,7 +6205,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>57.169193267822266</real>
+							<real>58.757022857666016</real>
 							<real>259</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -7866,39 +7868,39 @@
 						</array>
 						<array>
 							<real>0.0</real>
-							<real>39.769737243652344</real>
+							<real>40.288234710693359</real>
 						</array>
 						<array>
-							<real>32.686302185058594</real>
-							<real>39.769737243652344</real>
+							<real>32.681232452392578</real>
+							<real>40.288234710693359</real>
 						</array>
 						<array>
-							<real>93.941886901855469</real>
-							<real>39.441379547119141</real>
+							<real>94.720947265625</real>
+							<real>40.199275970458984</real>
 						</array>
 						<array>
-							<real>99.344734191894531</real>
-							<real>37.592899322509766</real>
+							<real>105.22019958496094</real>
+							<real>40.393081665039062</real>
 						</array>
 						<array>
-							<real>102.52626037597656</real>
-							<real>32.955348968505859</real>
+							<real>108.35101318359375</real>
+							<real>37.402706146240234</real>
 						</array>
 						<array>
-							<real>103.71214294433594</real>
-							<real>27.42298698425293</real>
+							<real>109.70765686035156</real>
+							<real>33.455406188964844</real>
 						</array>
 						<array>
-							<real>103.72587585449219</real>
-							<real>14.952619552612305</real>
+							<real>109.70765686035156</real>
+							<real>16.434106826782227</real>
 						</array>
 						<array>
-							<real>101.97096252441406</real>
-							<real>8.6353368759155273</real>
+							<real>109.38704681396484</real>
+							<real>6.3993129730224609</real>
 						</array>
 						<array>
-							<real>98.088890075683594</real>
-							<real>4.7336435317993164</real>
+							<real>102.50690460205078</real>
+							<real>1.1665306091308594</real>
 						</array>
 						<array>
 							<real>87.842453002929688</real>
@@ -7909,48 +7911,58 @@
 					<array>
 						<array>
 							<array>
+								<real>108.35101318359375</real>
+								<real>37.402706146240234</real>
+							</array>
+							<array>
+								<real>105.22019958496094</real>
+								<real>40.393081665039062</real>
+							</array>
+							<array>
+								<real>94.720947265625</real>
+								<real>40.199275970458984</real>
+							</array>
+						</array>
+						<array>
+							<array>
+								<real>94.720947265625</real>
+								<real>40.199275970458984</real>
+							</array>
+							<array>
+								<real>32.681232452392578</real>
+								<real>40.288234710693359</real>
+							</array>
+							<array>
+								<real>0.0</real>
+								<real>40.288234710693359</real>
+							</array>
+							<array>
+								<real>0.0</real>
+								<real>1.0145516395568848</real>
+							</array>
+							<array>
 								<real>87.842453002929688</real>
 								<real>1.0145516395568848</real>
 							</array>
 							<array>
-								<real>98.088890075683594</real>
-								<real>4.7336435317993164</real>
+								<real>102.50690460205078</real>
+								<real>1.1665306091308594</real>
 							</array>
 							<array>
-								<real>101.97096252441406</real>
-								<real>8.6353368759155273</real>
+								<real>109.38704681396484</real>
+								<real>6.3993129730224609</real>
 							</array>
 							<array>
-								<real>103.72587585449219</real>
-								<real>14.952619552612305</real>
+								<real>109.70765686035156</real>
+								<real>16.434106826782227</real>
 							</array>
 							<array>
-								<real>103.71214294433594</real>
-								<real>27.42298698425293</real>
+								<real>109.70765686035156</real>
+								<real>33.455406188964844</real>
 							</array>
 							<array>
-								<real>102.52626037597656</real>
-								<real>32.955348968505859</real>
-							</array>
-							<array>
-								<real>99.344734191894531</real>
-								<real>37.592899322509766</real>
-							</array>
-							<array>
-								<real>93.941886901855469</real>
-								<real>39.441379547119141</real>
-							</array>
-							<array>
-								<real>32.686302185058594</real>
-								<real>39.769737243652344</real>
-							</array>
-							<array>
-								<real>0.0</real>
-								<real>39.769737243652344</real>
-							</array>
-							<array>
-								<real>0.0</real>
-								<real>1.0145516395568848</real>
+								<real>108.35101318359375</real>
+								<real>37.402706146240234</real>
 							</array>
 						</array>
 					</array>
@@ -8323,16 +8335,16 @@
 					<key>points</key>
 					<array>
 						<array>
-							<real>1.2439937591552734</real>
-							<real>9.5387763977050781</real>
+							<real>1.6229339838027954</real>
+							<real>5.795290470123291</real>
 						</array>
 						<array>
 							<real>1.0430488586425781</real>
 							<real>23.411394119262695</real>
 						</array>
 						<array>
-							<real>0.6498115062713623</real>
-							<real>31.457582473754883</real>
+							<real>1.0335648059844971</real>
+							<real>34.162227630615234</real>
 						</array>
 						<array>
 							<real>4.8695197105407715</real>
@@ -8371,8 +8383,12 @@
 							<real>1.4674720764160156</real>
 						</array>
 						<array>
-							<real>4.4425249099731445</real>
-							<real>4.5066680908203125</real>
+							<real>5.886681079864502</real>
+							<real>1.5020177364349365</real>
+						</array>
+						<array>
+							<real>3.0427951812744141</real>
+							<real>3.6376767158508301</real>
 						</array>
 					</array>
 					<key>polygons</key>
@@ -8411,26 +8427,24 @@
 								<real>38.297351837158203</real>
 							</array>
 							<array>
-								<real>0.6498115062713623</real>
-								<real>31.457582473754883</real>
+								<real>1.0335648059844971</real>
+								<real>34.162227630615234</real>
 							</array>
 							<array>
 								<real>1.0430488586425781</real>
 								<real>23.411394119262695</real>
 							</array>
-						</array>
-						<array>
 							<array>
-								<real>1.0430488586425781</real>
-								<real>23.411394119262695</real>
+								<real>1.6229339838027954</real>
+								<real>5.795290470123291</real>
 							</array>
 							<array>
-								<real>1.2439937591552734</real>
-								<real>9.5387763977050781</real>
+								<real>3.0427951812744141</real>
+								<real>3.6376767158508301</real>
 							</array>
 							<array>
-								<real>4.4425249099731445</real>
-								<real>4.5066680908203125</real>
+								<real>5.886681079864502</real>
+								<real>1.5020177364349365</real>
 							</array>
 							<array>
 								<real>9.4495105743408203</real>
@@ -8455,10 +8469,6 @@
 							<array>
 								<real>15.859929084777832</real>
 								<real>39.126224517822266</real>
-							</array>
-							<array>
-								<real>4.8695197105407715</real>
-								<real>38.297351837158203</real>
 							</array>
 						</array>
 					</array>
@@ -8838,8 +8848,8 @@
 					<key>points</key>
 					<array>
 						<array>
-							<real>-38.873390197753906</real>
-							<real>-17.672367095947266</real>
+							<real>-38.45330810546875</real>
+							<real>-16.461956024169922</real>
 						</array>
 						<array>
 							<real>-45.017597198486328</real>
@@ -8862,16 +8872,16 @@
 							<real>10.799871444702148</real>
 						</array>
 						<array>
-							<real>-10.965427398681641</real>
-							<real>-17.672367095947266</real>
+							<real>-10.741833686828613</real>
+							<real>-15.724279403686523</real>
 						</array>
 					</array>
 					<key>polygons</key>
 					<array>
 						<array>
 							<array>
-								<real>-10.965427398681641</real>
-								<real>-17.672367095947266</real>
+								<real>-10.741833686828613</real>
+								<real>-15.724279403686523</real>
 							</array>
 							<array>
 								<real>-10.965427398681641</real>
@@ -8894,8 +8904,8 @@
 								<real>-14.879659652709961</real>
 							</array>
 							<array>
-								<real>-38.873390197753906</real>
-								<real>-17.672367095947266</real>
+								<real>-38.45330810546875</real>
+								<real>-16.461956024169922</real>
 							</array>
 						</array>
 					</array>
@@ -9574,8 +9584,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -10239,7 +10247,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>598.60906982421875</real>
+							<real>591.2066650390625</real>
 							<real>357.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -10575,7 +10583,7 @@
 						<key>value</key>
 						<array>
 							<real>318.5</real>
-							<real>14.604490280151367</real>
+							<real>16.057552337646484</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -11060,7 +11068,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>598.60906982421875</real>
+							<real>591.2066650390625</real>
 							<real>357.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -11151,39 +11159,55 @@
 					<array>
 						<array>
 							<real>-5.1041784286499023</real>
-							<real>4.3986845016479492</real>
+							<real>-0.10194225609302521</real>
 						</array>
 						<array>
 							<real>-5.1041784286499023</real>
-							<real>24.003419876098633</real>
+							<real>24.640665054321289</real>
 						</array>
 						<array>
-							<real>40.949565887451172</real>
-							<real>23.64634895324707</real>
+							<real>38.336540222167969</real>
+							<real>24.640665054321289</real>
 						</array>
 						<array>
-							<real>41.040596008300781</real>
-							<real>0.16042798757553101</real>
+							<real>41.4503173828125</real>
+							<real>21.764453887939453</real>
+						</array>
+						<array>
+							<real>41.162788391113281</real>
+							<real>2.8910083770751953</real>
+						</array>
+						<array>
+							<real>37.705154418945312</real>
+							<real>-0.10194225609302521</real>
 						</array>
 					</array>
 					<key>polygons</key>
 					<array>
 						<array>
 							<array>
-								<real>41.040596008300781</real>
-								<real>0.16042798757553101</real>
+								<real>37.705154418945312</real>
+								<real>-0.10194225609302521</real>
 							</array>
 							<array>
-								<real>40.949565887451172</real>
-								<real>23.64634895324707</real>
+								<real>41.162788391113281</real>
+								<real>2.8910083770751953</real>
+							</array>
+							<array>
+								<real>41.4503173828125</real>
+								<real>21.764453887939453</real>
+							</array>
+							<array>
+								<real>38.336540222167969</real>
+								<real>24.640665054321289</real>
 							</array>
 							<array>
 								<real>-5.1041784286499023</real>
-								<real>24.003419876098633</real>
+								<real>24.640665054321289</real>
 							</array>
 							<array>
 								<real>-5.1041784286499023</real>
-								<real>4.3986845016479492</real>
+								<real>-0.10194225609302521</real>
 							</array>
 						</array>
 					</array>
@@ -11763,8 +11787,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>2.114516019821167</real>
-							<real>2.114516019821167</real>
+							<real>2.1435482501983643</real>
+							<real>2.1435482501983643</real>
 							<true/>
 							<integer>0</integer>
 						</array>
@@ -11993,7 +12017,7 @@
 						<key>value</key>
 						<array>
 							<real>318.5</real>
-							<real>14.604490280151367</real>
+							<real>16.057552337646484</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -12164,7 +12188,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1.9666666984558105</real>
+			<real>2.0333333015441895</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

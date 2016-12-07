@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>618</integer>
+	<integer>628</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -60,7 +60,7 @@
 				<key>displayName</key>
 				<string>back2</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_background1</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -155,6 +155,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -229,7 +231,7 @@
 				<key>displayName</key>
 				<string>background</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_background</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -310,7 +312,7 @@
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>0.33000001311302185</real>
+						<real>0.33000004291534424</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -322,7 +324,7 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
-							<real>0.33000001311302185</real>
+							<real>0.33000004291534424</real>
 						</array>
 					</dict>
 					<dict>
@@ -334,8 +336,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>

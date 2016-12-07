@@ -111,7 +111,9 @@
 
 
 -(void) startAnimation:(int)currentFifteenId {
- 
+    
+    
+    NSLog(@"show animation");
     
     NSString *_myStr;
     

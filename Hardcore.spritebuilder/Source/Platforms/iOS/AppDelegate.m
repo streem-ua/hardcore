@@ -56,6 +56,7 @@
     
     NSMutableDictionary* cocos2dSetup = [NSMutableDictionary dictionaryWithContentsOfFile:configPath];
     
+    [cocos2dSetup setObject:@GL_DEPTH24_STENCIL8_OES forKey:CCSetupDepthFormat];
     // Note: this needs to happen before configureCCFileUtils is called, because we need apportable to correctly setup the screen scale factor.
 #ifdef APPORTABLE
     if([cocos2dSetup[CCSetupScreenMode] isEqual:CCScreenModeFixed])

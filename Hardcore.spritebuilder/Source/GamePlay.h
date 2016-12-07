@@ -1,6 +1,7 @@
 #import "CustomButton.h"
 #import "ButtonController.h"
-#import "Rusty.h" //
+#import "Rusty.h"
+#import "Ghost.h"//
 // странно, у тебя не переходит по .h?
 //ща я попрббую
 // переходит fuaga
@@ -26,29 +27,29 @@
 - (void) startGameWithLevel:(int)levelId withString:(NSString *)typeStr;
 - (void) reloadFifteen:(int)activePuzzleNumber;
 
+-(void) showFifteenFinalStats;
+
 -(void) spawnRustyFromWater;
 - (int) getActivePuzzleNumber;
 - (int) getTestActivePuzzleNumber;
--(void) setRustyRandomSpeed:(int)aditionalSpeed;
--(void) setRustyRandomJump:(int)aditionalJump;
 - (void) startFromPuzzle:(CCNode *)sender;
 //(CCButton *)sender
+-(void) showWinAnimation;
 
 
-@property CCNode *rusty;
+@property Rusty *rusty;
 //
 
 @property NSTimer *portalTimer;
 
 @property BOOL rustyKilledByWater;
 
-@property int defaultRustySpeed;
-@property int defaultRustyJump;
+
 
 @property BOOL portalTimerCreated;
 @property BOOL rustyMoving;
 @property BOOL rustyIsDead;
-
+//@property BOOL rustyKilledByWater;
 
 @property int activePuzzleNumber;
 @property int currentActiveLevel;
@@ -75,6 +76,7 @@
 
 //- (void)showFifteenFromGame:(NSTimer*)theTimer;
 - (void)showFifteenFromGameNew:(int)moveDirection;
+-(void) showFifteen;
 
 @property BOOL thisIsTutorial;
 @property BOOL firstTutorialWin;
@@ -82,11 +84,15 @@
 @property BOOL rustyDeadFirstTimeGlobal;
 @property BOOL allowRightLeftMenu;
 
+@property int levelNameNumber;
 
 @property int levelSeconds;
 @property int levelMinutes;
 
 @property BOOL fifteenNewLevel;
+@property BOOL isGamePaused;
+
+@property BOOL gravityIsChange;
 
 -(void) moveFifteenHighlightTutorial:(CGPoint) myPoint;
 
@@ -103,6 +109,19 @@
 
 @property NSUserDefaults *myFifteenSaved;
 
+
+
+-(void) setRustyRandomSpeed:(int)aditionalSpeed;
+-(void) setRustyRandomJump:(int)aditionalJump;
+
+@property int globalLevelNumber;
+
+@property int defaultRustySpeed;
+@property int defaultRustyJump;
+
+-(void) makeGhostAppear:(int)ghostId;
+
+-(CGAffineTransform)nonRigidTransform;
 
 
 @end

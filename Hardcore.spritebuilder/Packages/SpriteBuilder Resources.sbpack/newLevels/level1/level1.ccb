@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>3953</integer>
+	<integer>4069</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -51,7 +51,7 @@
 				<key>displayName</key>
 				<string>lvl1</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_background1</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -1389,7 +1389,7 @@
 				<key>displayName</key>
 				<string>background</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_background</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -1470,7 +1470,7 @@
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>1</real>
+						<real>0.92342853546142578</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1482,7 +1482,7 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
-							<real>1</real>
+							<real>0.92342853546142578</real>
 						</array>
 					</dict>
 					<dict>
@@ -1494,6 +1494,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2603,8 +2605,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>316.89999389648438</real>
-							<real>125.68059539794922</real>
+							<real>298.28427124023438</real>
+							<real>125.68651580810547</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2979,7 +2981,7 @@
 						<key>value</key>
 						<array>
 							<real>450.35443115234375</real>
-							<real>303</real>
+							<real>292.70556640625</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3349,7 +3351,7 @@
 						<key>value</key>
 						<array>
 							<real>151.66282653808594</real>
-							<real>83.5</real>
+							<real>64.816604614257812</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3667,7 +3669,7 @@
 						<key>value</key>
 						<array>
 							<real>46</real>
-							<real>45.900001525878906</real>
+							<real>69.087501525878906</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4144,8 +4146,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>286.10000610351562</real>
-							<real>293.60000610351562</real>
+							<real>303.40103149414062</real>
+							<real>347.60000610351562</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4189,8 +4191,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -4464,8 +4464,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>286.10000610351562</real>
-							<real>293.60000610351562</real>
+							<real>303.40103149414062</real>
+							<real>347.60000610351562</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4965,7 +4965,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>94.199996948242188</real>
+							<real>83.179603576660156</real>
 							<real>221.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -5287,7 +5287,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>94.199996948242188</real>
+							<real>83.179603576660156</real>
 							<real>221.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -6439,68 +6439,6 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>2983</integer>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>CCBFile</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>468.97274780273438</real>
-							<real>53.298583984375</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>newLevels/bonus/bonus.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
 				<integer>3166</integer>
 				<key>animatedProperties</key>
 				<dict>
@@ -6676,7 +6614,7 @@
 						<key>value</key>
 						<array>
 							<real>380.75</real>
-							<real>166</real>
+							<real>63.773353576660156</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -6977,7 +6915,7 @@
 						<key>value</key>
 						<array>
 							<real>380.75</real>
-							<real>166</real>
+							<real>63.773353576660156</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -7021,6 +6959,132 @@
 						</array>
 					</dict>
 				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>3983</integer>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCBFile</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>443.85443115234375</real>
+							<real>54.066604614257812</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>newLevels/crystal/final_flash/flash.ccb</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>4068</integer>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCBFile</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>173.80003356933594</real>
+							<real>125.68651580810547</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>newLevels/crystal/final_flash/boss_portal/bossPortal.ccb</string>
+					</dict>
+				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -7103,8 +7167,6 @@
 				<string></string>
 				<key>displayName</key>
 				<string>rusty_mask!!!!!</string>
-				<key>hidden</key>
-				<true/>
 				<key>memberVarAssignmentName</key>
 				<string>_rustyMask</string>
 				<key>memberVarAssignmentType</key>
@@ -7156,8 +7218,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>4.8000001907348633</real>
-							<real>4.8000001907348633</real>
+							<real>4.5916666984558105</real>
+							<real>4.5916666984558105</real>
 							<true/>
 							<integer>0</integer>
 						</array>
@@ -7476,7 +7538,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>4</real>
+			<real>3.1666667461395264</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

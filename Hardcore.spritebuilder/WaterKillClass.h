@@ -15,7 +15,7 @@
 -(void) moveWaterToInitPosition;
 
 @property CCNode *imageWaves;
-
+@property CCNode *_waterHolder;
 
 
 @end

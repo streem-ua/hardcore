@@ -7,24 +7,12 @@
 //
 
 #import "CCNode.h"
-//#import "GamePlay.h"
-
-@interface Rusty : CCSprite
-//@interface Rusty : CCNode <CCPhysicsCollisionDelegate>
 
 
-//@property (nonatomic, assign) CGPoint velocity;
+@interface Rusty : CCNode
 
 
-//@property GamePlay *gamePlayDelegate;
-
-
-
--(void) makeMovement:(int) movementDirection;
--(void) touchStopped;
--(void) tryAnimation: (int) direction;
-
-
-@property BOOL animationRunning;
+-(void) startJump;
+-(void) finishJump;
 
 @end

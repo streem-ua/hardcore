@@ -16,7 +16,9 @@
     CCSprite *jumpSprite;
     
     CCSprite *touchSprite;
-    
+    CCSprite *testLeftSprite;
+    CCSprite *testRightSprite;
+    CCSprite *testUpSprite;
 }
 
 
@@ -81,7 +83,26 @@
         touchSprite.scale = 0.5;
         touchSprite.position = ccp(idleSprite.position.x+idleSprite.boundingBox.size.width/2, idleSprite.position.y);
         [self addChild:touchSprite];
-    
+        
+        
+        testLeftSprite = [[CCSprite alloc] initWithImageNamed:@"arrow.png"];
+        testRightSprite = [[CCSprite alloc] initWithImageNamed:@"arrow.png"];
+        testRightSprite.rotation = 180;
+        testUpSprite = [[CCSprite alloc] initWithImageNamed:@"arrow.png"];
+        testUpSprite.rotation = 90;
+        
+        testLeftSprite.position = ccp(33, 25);
+        testRightSprite.position = ccp(testLeftSprite.position.x + 75, testLeftSprite.position.y);
+        testUpSprite.position = ccp(470, testLeftSprite.position.y);
+        
+        testLeftSprite.scale = 0.25;
+        testRightSprite.scale = 0.25;
+        testUpSprite.scale = 0.25;
+        
+        [self addChild:testLeftSprite];
+        [self addChild:testRightSprite];
+        [self addChild:testUpSprite];
+        
     }
     return self;
 }
@@ -104,7 +125,7 @@
         
         case 0:
             
-            //Left
+            
             idleSprite.visible = YES;
             leftSprite.visible = NO;
             rightSprite.visible = NO;

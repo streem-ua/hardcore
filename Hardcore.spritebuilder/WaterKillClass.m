@@ -20,42 +20,26 @@
 
 -(void) didLoadFromCCB{
     
-    
-    
-    
-    self.position = ccp(256, 0);
+
     self.imageWaves.position = ccp(256, -180.4);
     
     
     NSTimer *initWaterUpTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(runWater) userInfo:nil repeats:NO];
     
     
-    CCActionMoveTo *moveWater = [CCActionMoveTo actionWithDuration:10 position:ccp(-256, self.position.y)];
-    CCActionMoveTo *moveWaterNull = [CCActionMoveTo actionWithDuration:0 position:ccp(256, self.position.y)];
+    CCActionMoveTo *moveWater = [CCActionMoveTo actionWithDuration:8 position:ccp(-256, self._waterHolder.position.y)];
+    CCActionMoveTo *moveWaterNull = [CCActionMoveTo actionWithDuration:0 position:ccp(256, self._waterHolder.position.y)];
     CCActionSequence* leftAndRight = [CCActionSequence actions:moveWater, moveWaterNull, nil];
-    [self runAction:[CCActionRepeatForever actionWithAction:leftAndRight]];
-   
-    
-    
-    
-    
-    
-//    id actionSpaw = [CCActionSpawn actions:
-//                     leftAndRight,
-//                     upAndDown,
-//                     nil];
-    
-    
-    
 
-    [self runAction:[CCActionRepeatForever actionWithAction:leftAndRight]];
+    [self._waterHolder runAction:[CCActionRepeatForever actionWithAction:leftAndRight]];
+
     
     
-//    [self runAction:[CCActionRepeatForever actionWithAction:moveWaterUp]];
-    
-    
-    
-    
+}
+
+
+
+-(void) update:(CCTime)delta{
     
     
     
@@ -65,9 +49,9 @@
 
 -(void) runWater {
     
-    CCActionMoveTo *moveWaterUp = [CCActionMoveTo actionWithDuration:7 position:ccp(256, self.imageWaves.position.y+200)];
+    CCActionMoveTo *moveWaterUp = [CCActionMoveTo actionWithDuration:6 position:ccp(256, self.imageWaves.position.y+260)];
     CCActionMoveTo *moveWaterDown = [CCActionMoveTo actionWithDuration:2 position:ccp(256, -180.4)];
-    id delay = [CCActionDelay actionWithDuration: 3];
+    id delay = [CCActionDelay actionWithDuration: 1];
     CCActionSequence* upAndDown = [CCActionSequence actions:moveWaterUp, moveWaterDown, delay, nil];
     
     [self.imageWaves runAction:[CCActionRepeatForever actionWithAction:upAndDown]];

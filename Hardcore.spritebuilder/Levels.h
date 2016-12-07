@@ -20,8 +20,12 @@
 
 @property CCSprite *myBg;
 @property BOOL fifteenEnabled;
+@property BOOL levelFlipped;
 
 @property GamePlay *gameplayParrentDelegate;
+
+@property int levelOriginId;
+
 
 
 //- (instancetype)initWithGamePlay:(GamePlay *)gp;
@@ -39,6 +43,7 @@
 
 -(CGPoint)getRustyPos;
 -(void) updateRustyMask;
+-(void) hideAllPortals;
 
 -(void) makePortalExplode:(id)object withSelector:(SEL)selector;
 
@@ -75,4 +80,5 @@
 
 -(void) setFreeze:(BOOL) freeze;
 
+-(void) rustyIsDeadAlreadyMotherFucka;
 @end

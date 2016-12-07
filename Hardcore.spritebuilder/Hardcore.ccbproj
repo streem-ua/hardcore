@@ -182,6 +182,45 @@
 			<key>format_ios</key>
 			<integer>10</integer>
 		</dict>
+		<key>newLevels/level50/background1(50lvl) copy.png</key>
+		<dict>
+			<key>format_ios</key>
+			<integer>2</integer>
+			<key>format_ios_compress</key>
+			<true/>
+		</dict>
+		<key>newLevels/level50/fallisland(50lvl).png</key>
+		<dict>
+			<key>format_ios</key>
+			<integer>2</integer>
+		</dict>
+		<key>newLevels/level50/fallisland(50lvl)_NRM.png</key>
+		<dict>
+			<key>format_ios</key>
+			<integer>2</integer>
+		</dict>
+		<key>newLevels/level50/islands(50lvl).png</key>
+		<dict>
+			<key>format_ios</key>
+			<integer>2</integer>
+		</dict>
+		<key>newLevels/level50/islands(50lvl)_NRM.png</key>
+		<dict>
+			<key>format_ios</key>
+			<integer>2</integer>
+		</dict>
+		<key>newLevels/level55/test</key>
+		<dict>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
+		<key>newLevels/level60</key>
+		<dict/>
+		<key>newLevels/level9/v2.0.</key>
+		<dict>
+			<key>isDirty</key>
+			<true/>
+		</dict>
 		<key>shine2.ccbi</key>
 		<dict/>
 	</dict>
