@@ -14,4 +14,6 @@
 -(NSString *) getLevelNameById: (int)levelId withActivePuzzleNumber:(int)activePuzzleNumber;
 
 
+@property BOOL ifWeakDevice;
+
 @end

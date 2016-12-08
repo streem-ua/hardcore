@@ -25,7 +25,7 @@
 - (void) moveRustyToPosition:(CGPoint)myPos;
 - (void) hideFifteen;
 - (void) startGameWithLevel:(int)levelId withString:(NSString *)typeStr;
-- (void) reloadFifteen:(int)activePuzzleNumber;
+
 
 -(void) showFifteenFinalStats;
 

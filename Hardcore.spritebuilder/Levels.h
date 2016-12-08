@@ -70,6 +70,7 @@
 @property BOOL allowRightLeftMenu;
 @property BOOL lastWordAppear;
 
+-(void) switchOffLightningEffect;
 
 @property BOOL rightPortallFirstReached;
 @property CCNode *arrow1;

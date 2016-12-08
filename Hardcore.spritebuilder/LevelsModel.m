@@ -7,6 +7,7 @@
 //
 
 #import "LevelsModel.h"
+#import "UIDeviceHardware.h"
 
 @implementation LevelsModel
 
@@ -18,8 +19,16 @@
     if (self) {
         
         
+        UIDeviceHardware *uiDeviceHardware = [[UIDeviceHardware alloc] init];
         
         
+        NSLog(@"deviceType = %@" , uiDeviceHardware.platformString);
+        
+        if([uiDeviceHardware.platformString isEqualToString:@"iPad 2 (GSM)"]){
+            self.ifWeakDevice = YES;
+        } else {
+            self.ifWeakDevice = NO;
+        }
         
         
         

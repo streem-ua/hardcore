@@ -8,7 +8,7 @@
 //
 
 #import "Rusty.h"
-#import "UIDeviceHardware.h"
+
 
 @implementation Rusty {
     
@@ -19,7 +19,7 @@
     
     CCPhysicsBody *rustyPhysicsBody;
     
-    UIDeviceHardware *uiDeviceHardware;
+    
     
 }
 
@@ -43,7 +43,7 @@
         
         self.physicsBody = rustyPhysicsBody;
         
-        uiDeviceHardware = [[UIDeviceHardware alloc] init];
+        
         
         
         rustyIdle = [CCBReader load:@"rusty/rustyIdle"];
@@ -56,66 +56,28 @@
         
         
         
-        
-        
-        [self initLight];
-        
-        
     }
     return self;
 }
 
 
 
--(void) initLight{
-    
-    lightNode = [[CCLightNode alloc] init];
+-(void) initLight {
     
     
-    
-    
+        lightNode = [[CCLightNode alloc] init];
 
-    NSLog(@"deviceType = %@" , uiDeviceHardware.platformString);
-    
-    if([uiDeviceHardware.platformString isEqualToString:@"iPad 2 (GSM)"]){
-
-            lightNode.type = CCLightDirectional;
-        lightNode.intensity = 0.7;
-        lightNode.specularIntensity = 1 / 2;  //Karamelnost
-//        lightNode.specularIntensity = 0.1;
-        lightNode.depth = 80;
-        
-        lightNode.ambientIntensity = 0.4;
-        
-        lightNode.halfRadius = 0.9;
-        lightNode.cutoffRadius = 0.8;
-        
-
-
-        
-//        [[CCDirector sharedDirector] setAnimationInterval:1.0/30];
-
-
-   
-    } else {
         lightNode.type = CCLightPoint;
-        
-        
         lightNode.intensity = 0.8;
         lightNode.specularIntensity = 1 / 2;  //Karamelnost
         lightNode.specularIntensity = 0.05;
         lightNode.depth = 50;
-        
         lightNode.ambientIntensity = 0.65;
-        
         lightNode.halfRadius = 0.50;
         lightNode.cutoffRadius = 0;
-
-    }
-
+        
+        [self addChild:lightNode];
     
-    
-    [self addChild:lightNode];
     
 }
 -(void) startJump {

@@ -14,19 +14,10 @@
 #import "TopBar.h"
 #import "LeftMenuNew.h"
 
+
 @implementation GamePlay {
     
-    CCNode *tst;
-    CCNode *KOGDANACHALAS;
-    CCNode *tst_test;
-    CCNode *EBANYIVPOT2HUIPIZDA;
-
-    CCNode *EbaniyVROT1;
     
-    
-    
-    
-    // CCNode *rusty;
     CCNode *_levelNode;
     CCNode *_contentNode;
     
@@ -322,6 +313,10 @@
     
     
     
+    
+    
+    
+    
     fifteen = (Fifteen*)[CCBReader load:@"fifteen/fifteen"];
     fifteen.gameplayParrentDelegate = self;
     
@@ -532,6 +527,13 @@
        
 
     }
+    
+    if(!levelModel.ifWeakDevice){
+        [self.rusty initLight];
+    } else {
+        [levels switchOffLightningEffect];
+    }
+
 
     _onDoubleJump = 0;
     
