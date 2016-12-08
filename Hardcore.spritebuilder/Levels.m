@@ -303,15 +303,33 @@
 }
 
 
+
+-(void) switchOffLightningEffect {
+    
+    for(CCSprite *mySprite in [self children]) {
+        
+        
+        if([mySprite isKindOfClass:[CCSprite class]]){
+            //            if(mySprite.normalMapSpriteFrame){
+            mySprite.effect = NULL;
+            mySprite.effect = nil;
+            
+            //            }
+        }
+        
+    }
+    
+}
+
+
 - (void)didLoadFromCCB {
     
-//            for(CCSprite *sprite in [self children]) {
-//                if(sprite.normalMapSpriteFrame){
-//                    
-//                sprite.normalMapSpriteFrame = NULL;
-//                }
-//            }
-//    
+
+
+    
+    
+    
+    
 //
     
     _bossFinish.visible = NO;

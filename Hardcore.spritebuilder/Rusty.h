@@ -7,12 +7,13 @@
 //
 
 #import "CCNode.h"
-
+//#import "Levels.h"
 
 @interface Rusty : CCNode
 
 
 -(void) startJump;
 -(void) finishJump;
+-(void) initLight;
 
 @end
