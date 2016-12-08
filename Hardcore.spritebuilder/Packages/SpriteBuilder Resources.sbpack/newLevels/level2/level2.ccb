@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>2991</integer>
+	<integer>2998</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -146,8 +146,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1310,63 +1308,7 @@
 						</dict>
 					</dict>
 					<key>1</key>
-					<dict>
-						<key>opacity</key>
-						<dict>
-							<key>keyframes</key>
-							<array>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>opacity</string>
-									<key>time</key>
-									<real>1.0333333015441895</real>
-									<key>type</key>
-									<integer>10</integer>
-									<key>value</key>
-									<real>1</real>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>opacity</string>
-									<key>time</key>
-									<real>2.7000000476837158</real>
-									<key>type</key>
-									<integer>10</integer>
-									<key>value</key>
-									<real>0.33000001311302185</real>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>opacity</string>
-									<key>time</key>
-									<real>4.4666666984558105</real>
-									<key>type</key>
-									<integer>10</integer>
-									<key>value</key>
-									<real>1</real>
-								</dict>
-							</array>
-							<key>name</key>
-							<string>opacity</string>
-							<key>type</key>
-							<integer>10</integer>
-						</dict>
-					</dict>
+					<dict/>
 				</dict>
 				<key>baseClass</key>
 				<string>CCSprite</string>
@@ -1458,7 +1400,7 @@
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>0.33000004291534424</real>
+						<real>1</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1470,7 +1412,7 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
-							<real>0.33000004291534424</real>
+							<real>1</real>
 						</array>
 					</dict>
 					<dict>
@@ -1482,6 +1424,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>

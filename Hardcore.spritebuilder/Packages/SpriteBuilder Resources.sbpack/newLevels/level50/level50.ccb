@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>378</integer>
+	<integer>393</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -2740,8 +2740,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -3147,7 +3145,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>newLevels/level50/fallisland(50lvl)_NRM.png</string>
+							<string>newLevels/level50/321.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -3213,6 +3211,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>

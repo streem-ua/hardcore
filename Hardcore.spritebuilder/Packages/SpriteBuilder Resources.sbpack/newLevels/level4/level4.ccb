@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>3682</integer>
+	<integer>3688</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -146,8 +146,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -155,63 +153,7 @@
 				<key>animatedProperties</key>
 				<dict>
 					<key>0</key>
-					<dict>
-						<key>opacity</key>
-						<dict>
-							<key>keyframes</key>
-							<array>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>opacity</string>
-									<key>time</key>
-									<real>1.4666666984558105</real>
-									<key>type</key>
-									<integer>10</integer>
-									<key>value</key>
-									<real>1</real>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>opacity</string>
-									<key>time</key>
-									<real>3.2999999523162842</real>
-									<key>type</key>
-									<integer>10</integer>
-									<key>value</key>
-									<real>0.33000001311302185</real>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>opacity</string>
-									<key>time</key>
-									<real>4.9666666984558105</real>
-									<key>type</key>
-									<integer>10</integer>
-									<key>value</key>
-									<real>1</real>
-								</dict>
-							</array>
-							<key>name</key>
-							<string>opacity</string>
-							<key>type</key>
-							<integer>10</integer>
-						</dict>
-					</dict>
+					<dict/>
 				</dict>
 				<key>baseClass</key>
 				<string>CCSprite</string>
@@ -296,16 +238,6 @@
 						</array>
 					</dict>
 					<dict>
-						<key>baseValue</key>
-						<real>1</real>
-						<key>name</key>
-						<string>opacity</string>
-						<key>type</key>
-						<string>Float</string>
-						<key>value</key>
-						<real>1</real>
-					</dict>
-					<dict>
 						<key>name</key>
 						<string>color</string>
 						<key>type</key>
@@ -327,6 +259,10 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

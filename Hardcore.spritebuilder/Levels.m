@@ -348,20 +348,14 @@
     _background1.anchorPoint = ccp(0, 0);
     _background1.position = ccp(0, 0);
     
-    NSLog(@"deviceType = %@" , uiDeviceHardware.platformString);
+    CCActionFadeTo *fade1 = [CCActionFadeTo actionWithDuration:1.5 opacity:0.33];
+    CCActionDelay *delay = [CCActionDelay actionWithDuration:1.5];
+    CCActionFadeTo *fade2 = [CCActionFadeTo actionWithDuration:1 opacity:1];
+    NSLog(@"RABOTAEMDALWE");
+    CCActionSequence *mysequence = [CCActionSequence actions:fade1, delay, fade2, delay, nil];
+    [_background runAction:[CCActionRepeatForever actionWithAction:mysequence]];
+//
     
-    if([uiDeviceHardware.platformString isEqualToString:@"iPad 2 (GSM)"]){
-        _background1.visible = NO;
-        
-    } else {
-        CCActionFadeTo *fade1 = [CCActionFadeTo actionWithDuration:1.5 opacity:0.33];
-        CCActionDelay *delay = [CCActionDelay actionWithDuration:1.5];
-        CCActionFadeTo *fade2 = [CCActionFadeTo actionWithDuration:1 opacity:1];
-        NSLog(@"RABOTAEMDALWE");
-        CCActionSequence *mysequence = [CCActionSequence actions:fade1, delay, fade2, delay, nil];
-        [_background runAction:[CCActionRepeatForever actionWithAction:mysequence]];
-//        
-    }
     
 //    CCEffectPixellate *pix = [CCEffectPixellate effectWithBlockSize:2];
 //    CCSprite *pix1 = _background1.children[0];

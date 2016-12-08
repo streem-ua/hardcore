@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>4069</integer>
+	<integer>4075</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -146,6 +146,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1322,63 +1324,7 @@
 				<key>animatedProperties</key>
 				<dict>
 					<key>0</key>
-					<dict>
-						<key>opacity</key>
-						<dict>
-							<key>keyframes</key>
-							<array>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>opacity</string>
-									<key>time</key>
-									<real>0.83333331346511841</real>
-									<key>type</key>
-									<integer>10</integer>
-									<key>value</key>
-									<real>1</real>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>opacity</string>
-									<key>time</key>
-									<real>2.1333334445953369</real>
-									<key>type</key>
-									<integer>10</integer>
-									<key>value</key>
-									<real>0.33000001311302185</real>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>opacity</string>
-									<key>time</key>
-									<real>3.2999999523162842</real>
-									<key>type</key>
-									<integer>10</integer>
-									<key>value</key>
-									<real>1</real>
-								</dict>
-							</array>
-							<key>name</key>
-							<string>opacity</string>
-							<key>type</key>
-							<integer>10</integer>
-						</dict>
-					</dict>
+					<dict/>
 				</dict>
 				<key>baseClass</key>
 				<string>CCSprite</string>
@@ -1463,16 +1409,6 @@
 						</array>
 					</dict>
 					<dict>
-						<key>baseValue</key>
-						<real>1</real>
-						<key>name</key>
-						<string>opacity</string>
-						<key>type</key>
-						<string>Float</string>
-						<key>value</key>
-						<real>0.92342853546142578</real>
-					</dict>
-					<dict>
 						<key>name</key>
 						<string>color</string>
 						<key>type</key>
@@ -1482,7 +1418,7 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
-							<real>0.92342853546142578</real>
+							<real>1</real>
 						</array>
 					</dict>
 					<dict>
@@ -7083,8 +7019,6 @@
 						<string>newLevels/crystal/final_flash/boss_portal/bossPortal.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
